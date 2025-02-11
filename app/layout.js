@@ -1,4 +1,6 @@
 import localFont from "next/font/local";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import "./globals.css";
 
 const Montcerrat = localFont({
@@ -28,6 +30,11 @@ const Montcerrat = localFont({
       weight: "400",
       style: "normal",
     },
+    {
+      path: "./fonts/Montserrat/static/Montserrat-Light.ttf",
+      weight: "300",
+      style: "light",
+    },
   ],
 });
 
@@ -42,7 +49,11 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${Montcerrat.className} antialiased`}>{children}</body>
+      <body className={`${Montcerrat.className} antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

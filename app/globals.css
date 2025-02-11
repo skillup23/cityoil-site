@@ -33,9 +33,50 @@
 
 @layer base {
   body {
-    @apply bg-gray text-[#000] font-sans;
+    @apply bg-white text-[#000] font-sans;
   }
   h2 {
     @apply text-3xl font-[900];
   }
+  .container {
+    @apply mx-auto px-5;
+  }
+  .section {
+    @apply mt-8 sm:mt-[72px];
+  }
+  .animate-simple {
+    @apply transition duration-150 ease-in-out;
+  }
+}
+
+@media (width >= 1280px) {
+  .container {
+    max-width: 1120px;
+  }
+}
+
+.first-screen {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../public/main/fon-main.jpg);
+  background-size: cover;
+  background-position: center top -3rem;
+}
+.contact-screen {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url(../public/main/fon-contact.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.text_shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.pattern_background {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    url(../public/main/pattern.png);
+  background-size: 20%;
 }
