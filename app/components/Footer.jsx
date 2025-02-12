@@ -1,9 +1,9 @@
-import InfoBanner from "./InfoBanner";
+import InfoBanner from './InfoBanner';
 
 export default function Footer() {
   return (
     <footer>
-      <InfoBanner>
+      <InfoBanner style="py-5">
         <p className="mx-auto w-[905px] text-white text-xl text-center leading-6">
           © СитиОйл 2025 Все права защищены.
         </p>

@@ -1,28 +1,52 @@
-"use client";
-import arroy from "@/public/main/arroy-down.svg";
-import stella from "@/public/main/stella.svg";
-import Image from "next/image";
-import { useState } from "react";
+'use client';
+import arroy from '@/public/main/arroy-down.svg';
+import stella from '@/public/main/stella.svg';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { priceRost, priceShos, priceSorm, priceMach } from '@/public/data';
 
 export default function Stella() {
   const [isOpenCity, setIsOpenCity] = useState(false);
-  const [isCity, setIsCity] = useState("Краснодар");
-
+  const [isCity, setIsCity] = useState('Краснодар');
   const [isOpenAzs, setIsOpenAzs] = useState(false);
-  const [isAzs, setIsAzs] = useState("Ростовское ш., 5");
+  const [isAzs, setIsAzs] = useState('Ростовское ш., 5');
+
+  const [isPrice, setIsPrice] = useState(priceRost);
+
+  function selectedCity() {
+    setIsOpenCity(!isOpenCity);
+    setIsOpenAzs(false);
+  }
+
+  function selectedAzs() {
+    setIsOpenAzs(!isOpenAzs);
+    setIsOpenCity(false);
+  }
 
   function toggleCity(item) {
-    if (item == "Краснодар") {
-      setIsAzs("Ростовское ш., 5");
+    if (item == 'Краснодар') {
+      setIsAzs('Ростовское ш., 5');
     }
-    if (item == "Курганинск") {
-      setIsAzs("Шоссейная, 31");
+    if (item == 'Курганинск') {
+      setIsAzs('Шоссейная, 31');
     }
     setIsCity(item);
   }
 
+  useEffect(() => {
+    if (isAzs == 'Ростовское ш., 5') {
+      setIsPrice(priceRost);
+    } else if (isAzs == 'Сормовская, 200') {
+      setIsPrice(priceSorm);
+    } else if (isAzs == 'Мачуги, 9') {
+      setIsPrice(priceMach);
+    } else if (isAzs == 'Шоссейная, 31') {
+      setIsPrice(priceShos);
+    }
+  }, [isAzs]);
+
   return (
-    <div className="relative">
+    <div className="relative text-gray">
       <Image
         src={stella}
         width="auto"
@@ -31,11 +55,11 @@ export default function Stella() {
         className="max-w-[402px] -mt-80 -mb-36 -mr-2  z-20"
       />
 
-      <div className="absolute top-[75px] left-[130px] ">
+      <div className="absolute top-[80px] left-[130px] h-[350px] flex flex-col">
         {/* --------Выбор города--------- */}
         <div
           className="w-[196px] flex items-center justify-center gap-[10px] border-b-3 border-green cursor-pointer"
-          onClick={() => setIsOpenCity(!isOpenCity)}
+          onClick={() => selectedCity()}
         >
           <span className="py-2 text-base font-bold text-center leading-4 select-none">
             {isCity}
@@ -47,13 +71,13 @@ export default function Stella() {
           >
             <li
               className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-              onClick={() => toggleCity("Краснодар")}
+              onClick={() => toggleCity('Краснодар')}
             >
               Краснодар
             </li>
             <li
               className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-              onClick={() => toggleCity("Курганинск")}
+              onClick={() => toggleCity('Курганинск')}
             >
               Курганинск
             </li>
@@ -70,13 +94,13 @@ export default function Stella() {
         {/* ----------Выбор АЗС----------- */}
         <div
           className="mt-[10px] w-[196px] flex items-center justify-center gap-[10px] border-b-3 border-green cursor-pointer"
-          onClick={() => setIsOpenAzs(!isOpenAzs)}
+          onClick={() => selectedAzs()}
         >
-          <span className="py-2 text-base font-bold text-center leading-4 select-none select-none">
+          <span className="py-2 text-base font-bold text-center leading-4 select-none">
             {isAzs}
           </span>
 
-          {isCity == "Краснодар" && (
+          {isCity == 'Краснодар' && (
             <ul
               className={`w-full ${
                 isOpenAzs ? `flex` : `hidden`
@@ -84,26 +108,26 @@ export default function Stella() {
             >
               <li
                 className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs("Ростовское ш., 5")}
+                onClick={() => setIsAzs('Ростовское ш., 5')}
               >
                 Ростовское ш., 5
               </li>
               <li
                 className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs("Сормовская, 200")}
+                onClick={() => setIsAzs('Сормовская, 200')}
               >
                 Сормовская, 200
               </li>
               <li
                 className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs("Мачуги, 9")}
+                onClick={() => setIsAzs('Мачуги, 9')}
               >
                 Мачуги, 9
               </li>
             </ul>
           )}
 
-          {isCity == "Курганинск" && (
+          {isCity == 'Курганинск' && (
             <ul
               className={`w-full ${
                 isOpenAzs ? `scale-100 flex` : `scale-25 hidden`
@@ -111,7 +135,7 @@ export default function Stella() {
             >
               <li
                 className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs("Шоссейная, 31")}
+                onClick={() => setIsAzs('Шоссейная, 31')}
               >
                 Шоссейная, 31
               </li>
@@ -128,6 +152,23 @@ export default function Stella() {
         </div>
 
         {/* --------------Цены------------- */}
+        <div className="mt-6">
+          {isPrice.map(({ id, toplovo, price }) => {
+            return (
+              <ul
+                key={id}
+                className="w-[196px] mt-5 flex items-center justify-between gap-[10px] border-b-3 border-yeloy cursor-pointer"
+              >
+                <p className="py-2 text-xl font-bold text-center leading-4 select-none">
+                  {toplovo}
+                </p>
+                <p className="py-2 text-2xl font-bold text-center leading-4 select-none">
+                  {price}
+                </p>
+              </ul>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

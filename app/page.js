@@ -1,27 +1,27 @@
-import { azsAdress, contacts, onas, workers } from "@/public/data";
-import partner4 from "@/public/main/anb.svg";
-import azsFoto1 from "@/public/main/azs-foto1.jpg";
-import partner2 from "@/public/main/gazprom.svg";
-import iconMap from "@/public/main/iconMap.svg";
-import mapAzs from "@/public/main/mapAzs.jpg";
-import partner3 from "@/public/main/rosneft.svg";
-import sale1 from "@/public/main/sale1.jpg";
-import partner1 from "@/public/main/tatneft.svg";
-import Image from "next/image";
-import Link from "next/link";
-import Heading from "./components/Heading";
-import InfoBanner from "./components/InfoBanner";
-import SectionMain from "./components/SectionMain";
-import Stella from "./components/Stella";
-import Subtitle from "./components/Subtitle";
+import { azsAdress, contacts, onas, workers } from '@/public/data';
+import partner4 from '@/public/main/anb.svg';
+import azsFoto1 from '@/public/main/azs-foto1.jpg';
+import partner2 from '@/public/main/gazprom.svg';
+import iconMap from '@/public/main/iconMap.svg';
+import mapAzs from '@/public/main/mapAzs.jpg';
+import partner3 from '@/public/main/rosneft.svg';
+import sale1 from '@/public/main/sale1.jpg';
+import partner1 from '@/public/main/tatneft.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import Heading from './components/Heading';
+import InfoBanner from './components/InfoBanner';
+import SectionMain from './components/SectionMain';
+import Stella from './components/Stella';
+import Subtitle from './components/Subtitle';
 
 export default function Home() {
   return (
     <main>
       <InfoBanner>
-        <p className="mx-auto w-[905px] text-white text-xl text-center leading-6">
+        <p className="mx-auto w-[905px] text-white text-base text-center leading-6">
           Внимание! На АЗС ведутся ремонтные работы, но&nbsp;продажа топлива
-          осуществляется в&nbsp;штатном режиме. Мы всегда рады видеть вас
+          осуществляется в&nbsp;штатном режиме. Мы&nbsp;всегда рады видеть вас
           в&nbsp;числе наших клиентов!
         </p>
       </InfoBanner>
@@ -170,7 +170,7 @@ export default function Home() {
       </InfoBanner>
 
       {/* --------Акции--------- */}
-      <SectionMain>
+      <SectionMain style="pattern_background">
         <Subtitle>ДЛЯ НОВЫХ И ПОСТОЯННЫХ КЛИЕНТОВ</Subtitle>
         <Heading>Акции и предложения</Heading>
         <div className="flex items-center">
@@ -192,7 +192,7 @@ export default function Home() {
       </SectionMain>
 
       {/* --------Вакансии--------- */}
-      <SectionMain style="pattern_background">
+      <SectionMain>
         <Subtitle>ИЩЕМ СОТРУДНИКОВ</Subtitle>
         <Heading>Вакансии</Heading>
         <ul className="mt-[30px] flex items-center justify-between">
