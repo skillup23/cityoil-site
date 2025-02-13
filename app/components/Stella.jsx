@@ -3,7 +3,15 @@ import arroy from '@/public/main/arroy-down.svg';
 import stella from '@/public/main/stella.svg';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { priceRost, priceShos, priceSorm, priceMach } from '@/public/data';
+import {
+  priceRost,
+  priceShos,
+  priceSorm,
+  priceMach,
+  stellaCity,
+  stellaAdrKrd,
+  stellaAdrKgn,
+} from '@/public/data';
 
 export default function Stella() {
   const [isOpenCity, setIsOpenCity] = useState(false);
@@ -67,20 +75,19 @@ export default function Stella() {
           <ul
             className={`w-full ${
               isOpenCity ? `flex` : `hidden`
-            } absolute top-10 flex-col bg-gray-200`}
+            } absolute top-10 flex-col bg-gray-100 border-2 rounded-md`}
           >
-            <li
-              className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-              onClick={() => toggleCity('Краснодар')}
-            >
-              Краснодар
-            </li>
-            <li
-              className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-              onClick={() => toggleCity('Курганинск')}
-            >
-              Курганинск
-            </li>
+            {stellaCity.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className="py-1 cursor-pointer hover:bg-gray-200 text-center font-medium rounded-md select-none"
+                  onClick={() => toggleCity(`${item}`)}
+                >
+                  {item}
+                </li>
+              );
+            })}
           </ul>
           <Image
             src={arroy}
@@ -104,26 +111,19 @@ export default function Stella() {
             <ul
               className={`w-full ${
                 isOpenAzs ? `flex` : `hidden`
-              } absolute top-21 flex-col bg-gray-200 animate-simple`}
+              } absolute top-21 flex-col bg-gray-100 border-2 rounded-md`}
             >
-              <li
-                className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs('Ростовское ш., 5')}
-              >
-                Ростовское ш., 5
-              </li>
-              <li
-                className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs('Сормовская, 200')}
-              >
-                Сормовская, 200
-              </li>
-              <li
-                className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs('Мачуги, 9')}
-              >
-                Мачуги, 9
-              </li>
+              {stellaAdrKrd.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="py-1 cursor-pointer hover:bg-gray-200 font-medium text-center select-none"
+                    onClick={() => setIsAzs(`${item}`)}
+                  >
+                    {item}
+                  </li>
+                );
+              })}
             </ul>
           )}
 
@@ -133,12 +133,17 @@ export default function Stella() {
                 isOpenAzs ? `scale-100 flex` : `scale-25 hidden`
               } absolute top-21 flex-col bg-gray-200 animate-simple`}
             >
-              <li
-                className="py-1 cursor-pointer hover:bg-gray-light text-center select-none"
-                onClick={() => setIsAzs('Шоссейная, 31')}
-              >
-                Шоссейная, 31
-              </li>
+              {stellaAdrKgn.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="py-1 cursor-pointer hover:bg-gray-200 font-medium text-center select-none"
+                    onClick={() => setIsAzs(`${item}`)}
+                  >
+                    {item}
+                  </li>
+                );
+              })}
             </ul>
           )}
 

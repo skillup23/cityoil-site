@@ -1,6 +1,6 @@
-export default function SectionMain({ style, children }) {
+export default function SectionMain({ style, children, idScroll }) {
   return (
-    <section className={`w-full py-20 text-black ${style}`}>
+    <section className={`w-full py-20 text-black ${style}`} id={idScroll}>
       <div className="container">{children}</div>
     </section>
   );

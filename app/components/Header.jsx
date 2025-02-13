@@ -13,7 +13,7 @@ export default function Header() {
               <Link
                 key={id}
                 href={url}
-                className="text-base hover:text-gray animate-simple"
+                className="text-base hover:text-yeloy animate-simple"
               >
                 {title}
               </Link>
@@ -32,14 +32,14 @@ export default function Header() {
         />
         <div className="mt-1 flex flex-col font-bold">
           <Link
-            href="tel:88612040444"
-            className="text-[20px] hover:text-gray animate-simple"
+            href="tel:89184026758"
+            className="text-[20px] hover:text-green animate-simple"
           >
-            8 861 20 40 444
+            8 918 402 67 58
           </Link>
           <Link
             href="mailto:azs5@cityoil23.ru"
-            className="text-lg hover:text-gray animate-simple"
+            className="text-lg hover:text-green animate-simple"
           >
             azs5@cityoil23.ru
           </Link>
@@ -49,7 +49,7 @@ export default function Header() {
           <p className="text-[20px] text-green text-center">Краснодар</p>
           <Link
             href="https://yandex.ru/maps/-/CHelqEZ4"
-            className="text-lg hover:text-gray animate-simple"
+            className="text-lg hover:text-green animate-simple"
             target="_blank"
           >
             ул. Мачуги, 9
@@ -58,14 +58,14 @@ export default function Header() {
         <div className="mt-1 flex flex-col font-bold">
           <Link
             href="https://yandex.ru/maps/-/CHelqFNT"
-            className="text-lg hover:text-gray animate-simple"
+            className="text-lg hover:text-green animate-simple"
             target="_blank"
           >
             ул. Сормовская, 200
           </Link>
           <Link
             href="https://yandex.ru/maps/-/CHelqJo3"
-            className="mt-[2px] text-lg hover:text-gray animate-simple"
+            className="mt-[2px] text-lg hover:text-green animate-simple"
             target="_blank"
           >
             ул. Ростовское ш., 5
@@ -76,7 +76,7 @@ export default function Header() {
           <p className="text-[20px] text-yeloy text-center">Курганинск</p>
           <Link
             href="https://yandex.ru/maps/-/CHelq0Oe"
-            className="text-lg hover:text-gray animate-simple"
+            className="text-lg hover:text-yeloy animate-simple"
             target="_blank"
           >
             ул. Шоссейная, 31
