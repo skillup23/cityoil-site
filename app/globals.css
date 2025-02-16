@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   /* --color-background: var(--background);
@@ -49,18 +49,14 @@
   }
 }
 
-@media (width >= 1280px) {
-  .container {
-    max-width: 1120px;
-  }
-}
-
 .first-screen {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../public/main/fon-main.jpg);
+    url(../public/main/fon-main.jpg) -12rem 0rem;
   background-size: cover;
-  background-position: center top -3rem;
+  /* background-position: -14rem 0; */
+  background-repeat: no-repeat;
 }
+
 .contact-screen {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url(../public/main/fon-contact.jpg);
@@ -79,4 +75,36 @@
     ),
     url(../public/main/pattern.png);
   background-size: 20%;
+}
+
+/* Гамбургер кнопка хеадер */
+.hamburger-lines {
+  height: 25px;
+  width: 37px;
+  z-index: 200;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.line {
+  display: block;
+  height: 5px;
+  width: 100%;
+  border-radius: 0px;
+  background: var(--color-black);
+}
+
+@media (width >= 1280px) {
+  .container {
+    max-width: 1120px;
+  }
+}
+
+@media (width >= 768px) {
+  .first-screen {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) 0 -3rem,
+      url(../public/main/fon-main.jpg) 0 -3rem;
+    background-size: cover;
+    /* background-position: 0 -3rem; */
+  }
 }

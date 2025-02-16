@@ -1,23 +1,23 @@
-'use client';
-import arroy from '@/public/main/arroy-down.svg';
-import stella from '@/public/main/stella.svg';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+"use client";
 import {
+  priceMach,
   priceRost,
   priceShos,
   priceSorm,
-  priceMach,
-  stellaCity,
-  stellaAdrKrd,
   stellaAdrKgn,
-} from '@/public/data';
+  stellaAdrKrd,
+  stellaCity,
+} from "@/public/data";
+import arroy from "@/public/main/arroy-down.svg";
+import stella from "@/public/main/stella.svg";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Stella() {
   const [isOpenCity, setIsOpenCity] = useState(false);
-  const [isCity, setIsCity] = useState('Краснодар');
+  const [isCity, setIsCity] = useState("Краснодар");
   const [isOpenAzs, setIsOpenAzs] = useState(false);
-  const [isAzs, setIsAzs] = useState('Ростовское ш., 5');
+  const [isAzs, setIsAzs] = useState("Ростовское ш., 5");
 
   const [isPrice, setIsPrice] = useState(priceRost);
 
@@ -32,23 +32,23 @@ export default function Stella() {
   }
 
   function toggleCity(item) {
-    if (item == 'Краснодар') {
-      setIsAzs('Ростовское ш., 5');
+    if (item == "Краснодар") {
+      setIsAzs("Ростовское ш., 5");
     }
-    if (item == 'Курганинск') {
-      setIsAzs('Шоссейная, 31');
+    if (item == "Курганинск") {
+      setIsAzs("Шоссейная, 31");
     }
     setIsCity(item);
   }
 
   useEffect(() => {
-    if (isAzs == 'Ростовское ш., 5') {
+    if (isAzs == "Ростовское ш., 5") {
       setIsPrice(priceRost);
-    } else if (isAzs == 'Сормовская, 200') {
+    } else if (isAzs == "Сормовская, 200") {
       setIsPrice(priceSorm);
-    } else if (isAzs == 'Мачуги, 9') {
+    } else if (isAzs == "Мачуги, 9") {
       setIsPrice(priceMach);
-    } else if (isAzs == 'Шоссейная, 31') {
+    } else if (isAzs == "Шоссейная, 31") {
       setIsPrice(priceShos);
     }
   }, [isAzs]);
@@ -60,10 +60,10 @@ export default function Stella() {
         width="auto"
         height="auto"
         alt="фото АЗС"
-        className="max-w-[402px] -mt-80 -mb-36 -mr-2  z-20"
+        className="max-w-[320px] mx-auto -mt-80 md:max-w-[402px] md:-mt-80 md:-mb-36 md:-mr-2  z-20"
       />
 
-      <div className="absolute top-[80px] left-[130px] h-[350px] flex flex-col">
+      <div className="absolute h-[280px] top-[0px] left-[25%] md:top-[80px] md:left-[130px] md:h-[350px] flex flex-col">
         {/* --------Выбор города--------- */}
         <div
           className="w-[196px] flex items-center justify-center gap-[10px] border-b-3 border-green cursor-pointer"
@@ -107,7 +107,7 @@ export default function Stella() {
             {isAzs}
           </span>
 
-          {isCity == 'Краснодар' && (
+          {isCity == "Краснодар" && (
             <ul
               className={`w-full ${
                 isOpenAzs ? `flex` : `hidden`
@@ -127,7 +127,7 @@ export default function Stella() {
             </ul>
           )}
 
-          {isCity == 'Курганинск' && (
+          {isCity == "Курганинск" && (
             <ul
               className={`w-full ${
                 isOpenAzs ? `scale-100 flex` : `scale-25 hidden`

@@ -1,53 +1,57 @@
-import { azsAdress, contacts, onas, workers } from '@/public/data';
-import partner4 from '@/public/main/anb.svg';
-import azsFoto1 from '@/public/main/azs-foto1.jpg';
-import partner2 from '@/public/main/gazprom.svg';
-import iconMap from '@/public/main/iconMap.svg';
-import mapAzs from '@/public/main/mapAzs.jpg';
-import partner3 from '@/public/main/rosneft.svg';
-import sale1 from '@/public/main/sale1.jpg';
-import partner1 from '@/public/main/tatneft.svg';
-import Image from 'next/image';
-import Link from 'next/link';
-import Heading from './components/Heading';
-import InfoBanner from './components/InfoBanner';
-import SectionMain from './components/SectionMain';
-import Stella from './components/Stella';
-import Subtitle from './components/Subtitle';
-import Map from './components/Map';
+import { azsAdress, contacts, onas, workers } from "@/public/data";
+import partner4 from "@/public/main/anb.svg";
+import azsFoto1 from "@/public/main/azs-foto1.jpg";
+import partner2 from "@/public/main/gazprom.svg";
+import iconMap from "@/public/main/iconMap.svg";
+import mapAzs from "@/public/main/mapAzs.jpg";
+import partner3 from "@/public/main/rosneft.svg";
+import sale1 from "@/public/main/sale1.jpg";
+import partner1 from "@/public/main/tatneft.svg";
+import Image from "next/image";
+import Link from "next/link";
+import Heading from "./components/Heading";
+import InfoBanner from "./components/InfoBanner";
+import Map from "./components/Map";
+import SectionMain from "./components/SectionMain";
+import Stella from "./components/Stella";
+import Subtitle from "./components/Subtitle";
 
 export default function Home() {
   return (
     <main>
       <InfoBanner>
-        <p className="mx-auto w-[905px] text-white text-base text-center leading-6">
+        <p className="mx-auto lg:w-[905px] text-white text-xs md:text-base text-center leading-4 md:leading-6">
           Внимание! На АЗС ведутся ремонтные работы, но&nbsp;продажа топлива
           осуществляется в&nbsp;штатном режиме. Мы&nbsp;всегда рады видеть вас
-          в&nbsp;числе наших клиентов!
+          в&nbsp;числе наших&nbsp;клиентов!
         </p>
       </InfoBanner>
 
       {/* --------Первый экран--------- */}
-      <section className="py-15 w-full min-h-[78vh] first-screen">
+      <section className="py-15 w-full h-[70vh] md:min-h-[78vh] first-screen">
         <div className="container text-white">
-          <h5 className="text-4xl font-medium">
+          <h5 className="text-2xl md:text-4xl font-medium">
             БУДЬ
             <br />
-            <span className="ml-12 font-black">В РИТМЕ</span>
+            <span className="ml-8 md:ml-12 font-black">В РИТМЕ</span>
             <br />
-            <span className="ml-[115px] font-black text-yeloy">ГОРОДА</span>
+            <span className="ml-[80px] md:ml-[115px] font-black text-yeloy">
+              ГОРОДА
+            </span>
           </h5>
 
-          <h1 className="mt-[100px] text-5xl text-center font-bold leading-16">
-            СЕТЬ ГОРОДСКИХ АЗС <br />
-            <span className="text-8xl text-green font-black">СИТИОЙЛ</span>
+          <h1 className="mt-[60px] md:mt-[100px] text-[32px] md:text-5xl text-center font-bold leading-12 md:leading-16">
+            ГОРОДСКИЕ АЗС <br />
+            <span className="text-4xl md:text-8xl text-green font-black">
+              СИТИОЙЛ
+            </span>
           </h1>
         </div>
       </section>
 
       {/* --------Цены--------- */}
       <SectionMain style="pattern_background" idScroll="price">
-        <div className="flex justify-between">
+        <div className="flex flex-col-reverse md:flex-col justify-between">
           <div>
             <Subtitle>ТОПЛИВО НАИВЫСШЕГО КАЧЕСТВА</Subtitle>
             <Heading>Актуальные цены на топливо</Heading>
@@ -214,7 +218,7 @@ export default function Home() {
                 <p className="text-xl">{place}</p>
                 <div className="w-[495px] text-xl">
                   <p>
-                    Адрес:{' '}
+                    Адрес:{" "}
                     {adresses.map((item, index) => (
                       <span key={index} className="text-xl">
                         {item}

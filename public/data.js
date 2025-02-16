@@ -3,160 +3,167 @@ let id = 0;
 const navLinks = [
   {
     id: id++,
-    url: '#price',
-    title: 'Цены',
+    url: "#price",
+    title: "Цены",
   },
   {
     id: id++,
-    url: '#place',
-    title: 'Местоположение',
+    url: "#place",
+    title: "Местоположение",
   },
   {
     id: id++,
-    url: '#postavki',
-    title: 'Поставщики',
+    url: "#postavki",
+    title: "Поставщики",
   },
   {
     id: id++,
-    url: '#onas',
-    title: 'О нас',
+    url: "#onas",
+    title: "О нас",
   },
   {
     id: id++,
-    url: '#sales',
-    title: 'Акции',
+    url: "#sales",
+    title: "Акции",
   },
   {
     id: id++,
-    url: '#workin',
-    title: 'Вакансии',
+    url: "#workin",
+    title: "Вакансии",
   },
   {
     id: id++,
-    url: '#contacts',
-    title: 'Контакты',
+    url: "#contacts",
+    title: "Контакты",
   },
 ];
 
 const azsAdress = [
   {
     id: id++,
-    title: 'Краснодар, ул. Ростовское ш., 5',
-    url: 'https://yandex.ru/maps/-/CHelqJo3',
+    title: "Краснодар, ул. Ростовское ш., 5",
+    url: "https://yandex.ru/maps/-/CHelqJo3",
   },
   {
     id: id++,
-    title: 'Краснодар, ул. Мачуги, 9',
-    url: 'https://yandex.ru/maps/-/CHelqEZ4',
+    title: "Краснодар, ул. Мачуги, 9",
+    url: "https://yandex.ru/maps/-/CHelqEZ4",
   },
   {
     id: id++,
-    title: 'Краснодар, ул. Сормовская, 200',
-    url: 'https://yandex.ru/maps/-/CHelqFNT',
+    title: "Краснодар, ул. Сормовская, 200",
+    url: "https://yandex.ru/maps/-/CHelqFNT",
   },
   {
     id: id++,
-    title: 'Курганинск, ул. Шоссейная, 31',
-    url: 'https://yandex.ru/maps/-/CHelq0Oe',
+    title: "Курганинск, ул. Шоссейная, 31",
+    url: "https://yandex.ru/maps/-/CHelq0Oe",
   },
 ];
 
-import onas1 from '@/public/main/o-nas1.svg';
-import onas2 from '@/public/main/o-nas2.svg';
-import onas3 from '@/public/main/o-nas3.svg';
-import onas4 from '@/public/main/o-nas4.svg';
+import onas1 from "@/public/main/o-nas1.svg";
+import onas2 from "@/public/main/o-nas2.svg";
+import onas3 from "@/public/main/o-nas3.svg";
+import onas4 from "@/public/main/o-nas4.svg";
 
 const onas = [
   {
     id: id++,
     image: onas1,
-    title: 'Экологичность',
-    subtitle: 'ТОПЛИВО С ПОНИЖЕННЫМ СОДЕРЖАНИЕМ ПРИСАДОК',
+    title: "Экологичность",
+    subtitle: "ТОПЛИВО С ПОНИЖЕННЫМ СОДЕРЖАНИЕМ ПРИСАДОК",
   },
   {
     id: id++,
     image: onas2,
-    title: 'Доступная цена',
-    subtitle: 'ЗА СЧЕТ ПРЯМЫХ ПОСТАВОК С нефтебазы, БЕЗ НАЦЕНОК',
+    title: "Доступная цена",
+    subtitle: "ЗА СЧЕТ ПРЯМЫХ ПОСТАВОК С нефтебазы, БЕЗ НАЦЕНОК",
   },
   {
     id: id++,
     image: onas3,
-    title: 'Сити-Маркет',
-    subtitle: 'СВЕЖАЯ ВЫПЕЧКА, КОФЕ И ТОВАРЫ В ДОРОГУ',
+    title: "Сити-Маркет",
+    subtitle: "СВЕЖАЯ ВЫПЕЧКА, КОФЕ И ТОВАРЫ В ДОРОГУ",
   },
   {
     id: id++,
     image: onas4,
-    title: 'Расположение',
-    subtitle: 'В САМЫХ ОЖИВЛЕННЫХ РАЙОНАХ\u00A0ГОРОДА',
+    title: "Расположение",
+    subtitle: "В САМЫХ ОЖИВЛЕННЫХ РАЙОНАХ\u00A0ГОРОДА",
   },
 ];
 
 const workers = [
   {
     id: id++,
-    name: 'Оператор-кассир АЗС',
-    place: 'Краснодар',
+    name: "Оператор-кассир АЗС",
+    place: "Краснодар",
     adresses: [
-      'Ростовское шоссе 5, ',
-      'Сормовская 200, ',
-      'Мачуги 9, ',
-      'Степана Разина 57',
+      "Ростовское шоссе 5, ",
+      "Сормовская 200, ",
+      "Мачуги 9, ",
+      "Степана Разина 57",
     ],
-    price: 'от 5000 руб. за смену',
-    time: 'График: 1/3',
-    phone: 'Телефон: +7 861 204 04 44',
+    price: "от 5000 руб. за смену",
+    time: "График: 1/3",
+    phone: "Телефон: +7 861 204 04 44",
   },
   {
     id: id++,
-    name: 'Заправщик АЗС',
-    place: 'Курганинск',
+    name: "Заправщик АЗС",
+    place: "Курганинск",
     adresses: [
-      'Ростовское шоссе 5, ',
-      'Сормовская 200, ',
-      'Мачуги 9, ',
-      'Степана Разина 57',
+      "Ростовское шоссе 5, ",
+      "Сормовская 200, ",
+      "Мачуги 9, ",
+      "Степана Разина 57",
     ],
-    price: 'от 3500 руб. за смену',
-    time: 'График: 1/3',
-    phone: 'Телефон: +7 861 204 04 44',
+    price: "от 3500 руб. за смену",
+    time: "График: 1/3",
+    phone: "Телефон: +7 861 204 04 44",
   },
 ];
 
-import contact2 from '@/public/main/email.svg';
-import contact1 from '@/public/main/phone.svg';
-import contact4 from '@/public/main/telegram.svg';
-import contact3 from '@/public/main/whatsapp.svg';
+import contact2Black from "@/public/main/email-black.svg";
+import contact2 from "@/public/main/email.svg";
+import contact1 from "@/public/main/phone.svg";
+import contact4Black from "@/public/main/telegram-black.svg";
+import contact4 from "@/public/main/telegram.svg";
+import contact3Black from "@/public/main/whatsapp-black.svg";
+import contact3 from "@/public/main/whatsapp.svg";
 
 const contacts = [
   {
     id: id++,
     image: contact1,
-    title: 'Телефон',
-    subtitle: '+7 918 402-67-58',
-    url: 'tel:89184026758',
+    imageBlack: "",
+    title: "Телефон",
+    subtitle: "+7 918 402-67-58",
+    url: "tel:89184026758",
   },
   {
     id: id++,
     image: contact2,
-    title: 'Email',
-    subtitle: 'azs5@cityoil23.ru',
-    url: 'mailto:azs5@cityoil23.ru',
+    imageBlack: contact2Black,
+    title: "Email",
+    subtitle: "azs5@cityoil23.ru",
+    url: "mailto:azs5@cityoil23.ru",
   },
   {
     id: id++,
     image: contact3,
-    title: 'Мессенджер',
-    subtitle: 'WhatsApp',
-    url: '#',
+    imageBlack: contact3Black,
+    title: "Мессенджер",
+    subtitle: "WhatsApp",
+    url: "#",
   },
   {
     id: id++,
     image: contact4,
-    title: 'Мессенджер',
-    subtitle: 'Telegram',
-    url: '#',
+    imageBlack: contact4Black,
+    title: "Мессенджер",
+    subtitle: "Telegram",
+    url: "#",
   },
 ];
 
@@ -164,23 +171,23 @@ const contacts = [
 const priceRost = [
   {
     id: id++,
-    toplovo: 'Аи92',
-    price: '56,60',
+    toplovo: "Аи92",
+    price: "56,60",
   },
   {
     id: id++,
-    toplovo: 'Аи95',
-    price: '61,90',
+    toplovo: "Аи95",
+    price: "61,90",
   },
   {
     id: id++,
-    toplovo: 'Аи98',
-    price: '84,30',
+    toplovo: "Аи98",
+    price: "84,30",
   },
   {
     id: id++,
-    toplovo: 'ДТ зим.',
-    price: '65,50',
+    toplovo: "ДТ зим.",
+    price: "65,50",
   },
 ];
 
@@ -188,18 +195,18 @@ const priceRost = [
 const priceSorm = [
   {
     id: id++,
-    toplovo: 'Аи92',
-    price: '56,70',
+    toplovo: "Аи92",
+    price: "56,70",
   },
   {
     id: id++,
-    toplovo: 'Аи95',
-    price: '62,00',
+    toplovo: "Аи95",
+    price: "62,00",
   },
   {
     id: id++,
-    toplovo: 'ДТ зим.',
-    price: '65,70',
+    toplovo: "ДТ зим.",
+    price: "65,70",
   },
 ];
 
@@ -207,18 +214,18 @@ const priceSorm = [
 const priceMach = [
   {
     id: id++,
-    toplovo: 'Аи92',
-    price: '56,70',
+    toplovo: "Аи92",
+    price: "56,70",
   },
   {
     id: id++,
-    toplovo: 'Аи95',
-    price: '62,00',
+    toplovo: "Аи95",
+    price: "62,00",
   },
   {
     id: id++,
-    toplovo: 'ДТ зим.',
-    price: '65,70',
+    toplovo: "ДТ зим.",
+    price: "65,70",
   },
 ];
 
@@ -226,37 +233,37 @@ const priceMach = [
 const priceShos = [
   {
     id: id++,
-    toplovo: 'Аи92',
-    price: '56,70',
+    toplovo: "Аи92",
+    price: "56,70",
   },
   {
     id: id++,
-    toplovo: 'Аи95',
-    price: '62,15',
+    toplovo: "Аи95",
+    price: "62,15",
   },
   {
     id: id++,
-    toplovo: 'ДТ зим.',
-    price: '65,70',
+    toplovo: "ДТ зим.",
+    price: "65,70",
   },
 ];
 
 // Стелла
-const stellaCity = ['Краснодар', 'Курганинск'];
-const stellaAdrKrd = ['Ростовское ш., 5', 'Сормовская, 200', 'Мачуги, 9'];
-const stellaAdrKgn = ['Шоссейная, 31'];
+const stellaCity = ["Краснодар", "Курганинск"];
+const stellaAdrKrd = ["Ростовское ш., 5", "Сормовская, 200", "Мачуги, 9"];
+const stellaAdrKgn = ["Шоссейная, 31"];
 
 export {
   azsAdress,
   contacts,
   navLinks,
   onas,
-  workers,
-  priceRost,
-  priceSorm,
   priceMach,
+  priceRost,
   priceShos,
-  stellaCity,
-  stellaAdrKrd,
+  priceSorm,
   stellaAdrKgn,
+  stellaAdrKrd,
+  stellaCity,
+  workers,
 };
