@@ -71,19 +71,19 @@ const onas = [
     id: id++,
     image: onas1,
     title: "Экологичность",
-    subtitle: "ТОПЛИВО С ПОНИЖЕННЫМ СОДЕРЖАНИЕМ ПРИСАДОК",
+    subtitle: "ТОПЛИВО С\u00A0ПОНИЖЕННЫМ СОДЕРЖАНИЕМ ПРИСАДОК",
   },
   {
     id: id++,
     image: onas2,
     title: "Доступная цена",
-    subtitle: "ЗА СЧЕТ ПРЯМЫХ ПОСТАВОК С нефтебазы, БЕЗ НАЦЕНОК",
+    subtitle: "ЗА СЧЕТ ПРЯМЫХ ПОСТАВОК С\u00A0нефтебазы, БЕЗ\u00A0НАЦЕНОК",
   },
   {
     id: id++,
     image: onas3,
     title: "Сити-Маркет",
-    subtitle: "СВЕЖАЯ ВЫПЕЧКА, КОФЕ И ТОВАРЫ В ДОРОГУ",
+    subtitle: "СВЕЖАЯ ВЫПЕЧКА, КОФЕ И ТОВАРЫ В\u00A0ДОРОГУ",
   },
   {
     id: id++,
@@ -172,12 +172,12 @@ const priceRost = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "56,60",
+    price: "56,90",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "61,90",
+    price: "62,20",
   },
   {
     id: id++,
@@ -187,7 +187,7 @@ const priceRost = [
   {
     id: id++,
     toplovo: "ДТ зим.",
-    price: "65,50",
+    price: "65,80",
   },
 ];
 
@@ -196,17 +196,17 @@ const priceSorm = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "56,70",
+    price: "57,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "62,00",
+    price: "62,30",
   },
   {
     id: id++,
     toplovo: "ДТ зим.",
-    price: "65,70",
+    price: "66,00",
   },
 ];
 
@@ -215,17 +215,17 @@ const priceMach = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "56,70",
+    price: "57,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "62,00",
+    price: "62,30",
   },
   {
     id: id++,
     toplovo: "ДТ зим.",
-    price: "65,70",
+    price: "66,00",
   },
 ];
 
@@ -234,17 +234,17 @@ const priceShos = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "56,70",
+    price: "57,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "62,15",
+    price: "62,45",
   },
   {
     id: id++,
     toplovo: "ДТ зим.",
-    price: "65,70",
+    price: "66,00",
   },
 ];
 

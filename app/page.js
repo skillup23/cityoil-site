@@ -51,16 +51,20 @@ export default function Home() {
 
       {/* --------Цены--------- */}
       <SectionMain style="pattern_background" idScroll="price">
-        <div className="flex flex-col-reverse md:flex-col justify-between">
+        <div className="flex flex-col-reverse md:flex-row justify-between">
           <div>
-            <Subtitle>ТОПЛИВО НАИВЫСШЕГО КАЧЕСТВА</Subtitle>
-            <Heading>Актуальные цены на топливо</Heading>
+            <Subtitle style="hidden md:block">
+              ТОПЛИВО НАИВЫСШЕГО КАЧЕСТВА
+            </Subtitle>
+            <Heading style="mt-5 md:mt-3">
+              Актуальные цены на&nbsp;топливо
+            </Heading>
             <Image
               src={azsFoto1}
               width="auto"
               height="auto"
               alt="фото АЗС"
-              className="max-w-[572px] rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              className="w-[100%] md:max-w-[572px] rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
             />
           </div>
           <Stella />
@@ -69,8 +73,8 @@ export default function Home() {
 
       {/* --------Местоположение--------- */}
       <SectionMain idScroll="place">
-        <div className="w-full flex justify-between">
-          <div className="w-1/2">
+        <div className="w-full flex flex-col md:flex-row justify-between">
+          <div className="w-full md:w-1/2">
             <Subtitle>ДОБРО ПОЖАЛОВАТЬ</Subtitle>
             <Heading>Местоположение АЗС&nbsp;СИТИОЙЛ</Heading>
             <div className="mt-[30px]">
@@ -87,22 +91,24 @@ export default function Home() {
                       width="auto"
                       height="auto"
                       alt="фото АЗС"
-                      className="w-[50px]"
+                      className="w-[30px] md:w-[50px]"
                     />
-                    <h6 className="text-2xl hover:text-green">{title}</h6>
+                    <h6 className="text-[18px] md:text-2xl hover:text-green">
+                      {title}
+                    </h6>
                   </Link>
                 );
               })}
             </div>
           </div>
 
-          <div className="relative w-1/2">
+          <div className="relative w-full md:w-1/2">
             <Image
               src={mapAzs}
               width="auto"
               height="auto"
               alt="фото АЗС"
-              className="absolute top-8 left-0 max-w-[535px] h-[356px] self-end rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)] z-10"
+              className="mt-5 md:mt-0 relative md:absolute top-0 md:top-8 left-0 w-full md:max-w-[535px] h-auto md:h-[356px] self-end rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)] z-10"
             />
             <div className="z-20">
               <Map />
@@ -116,7 +122,7 @@ export default function Home() {
         <Subtitle>НАДЕЖНЫЕ БИЗНЕС-ПАРТНЕРЫ</Subtitle>
         <Heading>Поставщики</Heading>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
           <Image
             src={partner1}
             width="auto"
@@ -149,30 +155,31 @@ export default function Home() {
           </Link>
         </div>
 
-        <h6 className="mt-[50px] text-2xl text-center font-bold">
-          АЗС «СИТИОЙЛ» приглашает к сотрудничеству бизнес-партнеров
+        <h6 className="mt-[50px] text-xl md:text-2xl text-center font-bold">
+          АЗС «СИТИОЙЛ» приглашает&nbsp;к&nbsp;сотрудничеству
+          бизнес&#8209;партнеров
         </h6>
       </SectionMain>
 
       {/* --------О нас--------- */}
-      <InfoBanner style="py-20" idScroll="onas">
+      <InfoBanner style="pt-10 pb-[50px] md:py-20 px-0" idScroll="onas">
         <Heading style="text-center text-white">АЗС СИТИОЙЛ — это</Heading>
 
-        <ul className="mt-[30px] flex items-center justify-between">
+        <ul className="mt-[25px] md:mt-[30px] flex items-center justify-between flex-wrap gap-y-6 sm:gap-y-0">
           {onas.map(({ id, image, title, subtitle }) => {
             return (
-              <li key={id} className="w-1/4">
+              <li key={id} className="w-1/2 md:w-1/4">
                 <Image
                   src={image}
                   width="auto"
                   height="auto"
                   alt="иконка"
-                  className="w-[65px] mx-auto"
+                  className="w-[45px] md:w-[65px] mx-auto"
                 />
-                <h6 className="text-xl font-bold text-yeloy uppercase text-center">
+                <h6 className="mt-[5px] md:mt-0 text-[15px] md:text-xl font-bold text-yeloy uppercase text-center">
                   {title}
                 </h6>
-                <p className="text-sm text-white font-normal uppercase text-center">
+                <p className="mt-[5px] md:mt-0 text-sm text-white font-normal uppercase text-center">
                   {subtitle}
                 </p>
               </li>
@@ -185,9 +192,9 @@ export default function Home() {
       <SectionMain style="pattern_background" idScroll="sales">
         <Subtitle>ДЛЯ НОВЫХ И ПОСТОЯННЫХ КЛИЕНТОВ</Subtitle>
         <Heading>Акции и предложения</Heading>
-        <div className="flex items-center">
-          <div className="w-1/2 mr-20">
-            <h5 className="text-2xl text-center text-gray font-bold">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/2 my-[20px] md:mr-20 md:ml-0">
+            <h5 className="text-xl md:text-2xl text-center text-gray font-bold">
               Данный раздел <br /> находится в разработке. <br /> Просим
               извинения за <br /> предоставленные неудобства.
             </h5>
@@ -198,7 +205,7 @@ export default function Home() {
             width="auto"
             height="auto"
             alt="акция"
-            className="w-1/2 -mt-14"
+            className="w-full md:w-1/2 mt-8 md:-mt-14"
           />
         </div>
       </SectionMain>
@@ -207,28 +214,26 @@ export default function Home() {
       <SectionMain idScroll="workin">
         <Subtitle>ИЩЕМ СОТРУДНИКОВ</Subtitle>
         <Heading>Вакансии</Heading>
-        <ul className="mt-[30px] flex items-center justify-between">
+        <ul className="mt-[30px] flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
           {workers.map(({ id, name, place, price, time, phone, adresses }) => {
             return (
               <li
                 key={id}
-                className="p-4 font-sebold border-2 border-green rounded-lg"
+                className="p-4 font-sebold border-2 border-green rounded-lg text-lg md:text-xl"
               >
-                <h6 className="text-2xl font-bold">{name}</h6>
-                <p className="text-xl">{place}</p>
-                <div className="w-[495px] text-xl">
+                <h6 className="text-xl md:text-2xl font-bold">{name}</h6>
+                <p>{place}</p>
+                <div className="w-full md:w-[495px]">
                   <p>
                     Адрес:{" "}
                     {adresses.map((item, index) => (
-                      <span key={index} className="text-xl">
-                        {item}
-                      </span>
+                      <span key={index}>{item}</span>
                     ))}
                   </p>
                 </div>
-                <p className="text-xl">{price}</p>
-                <p className="text-xl">{time}</p>
-                <p className="text-xl">{phone}</p>
+                <p>{price}</p>
+                <p>{time}</p>
+                <p>{phone}</p>
               </li>
             );
           })}
@@ -237,25 +242,31 @@ export default function Home() {
 
       {/* --------Контакты--------- */}
       <SectionMain style="contact-screen text-white" idScroll="contacts">
-        <Heading>Контакты</Heading>
-        <div className="mt-[90px] mb-[60px] flex items-center justify-between ">
+        <Heading style="mt-0">Контакты</Heading>
+        <div className="mt-[30px] mb-0 md:mt-[90px] md:mb-[60px] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
           {contacts.map(({ id, image, title, subtitle, url }) => {
             return (
               <Link
                 href={url}
                 target="_blank"
                 key={id}
-                className="w-1/4 flex flex-col gap-[15px] hover:text-green"
+                className="w-full md:w-1/4 flex flex-row md:flex-col gap-[15px] hover:text-green"
               >
                 <Image
                   src={image}
                   width="auto"
                   height="auto"
                   alt="иконка"
-                  className="w-[60px] mx-auto"
+                  className="w-[50px] md:w-[60px] ml-12 mr-2 md:mx-auto"
                 />
-                <h6 className="text-2xl font-semibold text-center">{title}</h6>
-                <p className="text-2xl font-medium text-center">{subtitle}</p>
+                <div className="flex flex-col gap-0 md:gap-3">
+                  <h6 className="text-xl md:text-2xl font-semibold text-start md:text-center">
+                    {title}
+                  </h6>
+                  <p className="text-xl md:text-2xl font-medium text-start md:text-center">
+                    {subtitle}
+                  </p>
+                </div>
               </Link>
             );
           })}

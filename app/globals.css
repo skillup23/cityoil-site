@@ -58,10 +58,10 @@
 }
 
 .contact-screen {
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(../public/main/fon-contact.jpg);
-  background-size: cover;
-  background-position: center bottom;
+  background-size: 350%;
+  background-position: -29rem -24rem;
 }
 
 .text_shadow {
@@ -74,7 +74,7 @@
       rgba(255, 255, 255, 0.95)
     ),
     url(../public/main/pattern.png);
-  background-size: 20%;
+  background-size: 60%;
 }
 
 /* Гамбургер кнопка хеадер */
@@ -106,5 +106,16 @@
       url(../public/main/fon-main.jpg) 0 -3rem;
     background-size: cover;
     /* background-position: 0 -3rem; */
+  }
+
+  .contact-screen {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+      url(../public/main/fon-contact.jpg);
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .pattern_background {
+    background-size: 20%;
   }
 }

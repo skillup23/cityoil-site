@@ -9,6 +9,7 @@ import {
   stellaCity,
 } from "@/public/data";
 import arroy from "@/public/main/arroy-down.svg";
+import stellaMob from "@/public/main/stella-mobile.svg";
 import stella from "@/public/main/stella.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -60,13 +61,20 @@ export default function Stella() {
         width="auto"
         height="auto"
         alt="фото АЗС"
-        className="max-w-[320px] mx-auto -mt-80 md:max-w-[402px] md:-mt-80 md:-mb-36 md:-mr-2  z-20"
+        className="hidden md:block max-w-[402px] -mt-80 -mb-36 -mr-2 z-20"
+      />
+      <Image
+        src={stellaMob}
+        width="auto"
+        height="auto"
+        alt="фото АЗС"
+        className="block md:hidden w-full mx-auto -mt-[34vh] z-20"
       />
 
-      <div className="absolute h-[280px] top-[0px] left-[25%] md:top-[80px] md:left-[130px] md:h-[350px] flex flex-col">
+      <div className="absolute h-[280px] top-[6%] left-[31vw] md:top-[80px] md:left-[130px] md:h-[350px] flex flex-col">
         {/* --------Выбор города--------- */}
         <div
-          className="w-[196px] flex items-center justify-center gap-[10px] border-b-3 border-green cursor-pointer"
+          className="w-[40vw] md:w-[196px] flex items-center justify-center gap-[10px] border-b-3 border-green cursor-pointer"
           onClick={() => selectedCity()}
         >
           <span className="py-2 text-base font-bold text-center leading-4 select-none">
@@ -100,10 +108,10 @@ export default function Stella() {
 
         {/* ----------Выбор АЗС----------- */}
         <div
-          className="mt-[10px] w-[196px] flex items-center justify-center gap-[10px] border-b-3 border-green cursor-pointer"
+          className="mt-1 md:mt-[10px] w-[40vw] md:w-[196px] flex items-center justify-center gap-1 md:gap-[10px] border-b-3 border-green cursor-pointer"
           onClick={() => selectedAzs()}
         >
-          <span className="py-2 text-base font-bold text-center leading-4 select-none">
+          <span className="py-2 text-sm md:text-base font-bold text-center leading-4 select-none">
             {isAzs}
           </span>
 
@@ -157,17 +165,17 @@ export default function Stella() {
         </div>
 
         {/* --------------Цены------------- */}
-        <div className="mt-6">
+        <div className="mt-4 md:mt-6">
           {isPrice.map(({ id, toplovo, price }) => {
             return (
               <ul
                 key={id}
-                className="w-[196px] mt-5 flex items-center justify-between gap-[10px] border-b-3 border-yeloy cursor-pointer"
+                className="w-[40vw] md:w-[196px] mt-2 md:mt-5 flex items-center justify-between gap-[10px] border-b-3 border-yeloy cursor-pointer"
               >
-                <p className="py-2 text-xl font-bold text-center leading-4 select-none">
+                <p className="py-2 text-lg md:text-xl font-bold text-center leading-4 select-none">
                   {toplovo}
                 </p>
-                <p className="py-2 text-2xl font-bold text-center leading-4 select-none">
+                <p className="py-2 text-xl md:text-2xl font-bold text-center leading-4 select-none">
                   {price}
                 </p>
               </ul>
