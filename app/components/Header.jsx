@@ -182,7 +182,11 @@ export default function Header() {
         </div>
 
         {/*      Мобильное меню      */}
-        <MobileNav navLinks={navLinks} isOpen={isOpen} />
+        <MobileNav
+          navLinks={navLinks}
+          isOpen={isOpen}
+          openMobileMenu={openMobileMenu}
+        />
       </div>
     </header>
   );

@@ -1,26 +1,31 @@
 import Link from "next/link";
 import SocialButtons from "./SocialButtons";
 
-export default function MobileNav({ navLinks, isOpen }) {
+export default function MobileNav({ navLinks, isOpen, openMobileMenu }) {
   return (
-    <nav
+    <div
       className={`${
         isOpen ? `translate-x-0` : `-translate-x-full`
-      } flex lg:hidden absolute w-full h-dvh bg-gray p-8 top-[60px] sm:top-[93px] flex-col gap-4 animate-simple z-30`}
+      } w-full block lg:hidden absolute h-dvh bg-gray p-8 top-[60px] sm:top-[93px] z-30 animate-simple`}
     >
-      {navLinks.map(({ id, url, title }) => {
-        return (
-          <Link
-            key={id}
-            href={url}
-            className="text-[18px] text-white uppercase font-medium tracking-wide hover:text-gray-light animate-simple"
-          >
-            {title}
-          </Link>
-        );
-      })}
+      <nav className="flex flex-col items-start gap-4">
+        {navLinks.map(({ id, url, title }) => {
+          return (
+            <Link
+              key={id}
+              href={url}
+              onClick={() => {
+                openMobileMenu();
+              }}
+              className="text-[18px] text-white uppercase font-medium tracking-wide hover:text-gray-light animate-simple"
+            >
+              {title}
+            </Link>
+          );
+        })}
+      </nav>
 
-      <div className="mt-2 flex flex-col text-white text-base">
+      <div className="mt-10 flex flex-col text-white text-base gap-1">
         <p className="text-lg">Краснодар</p>
         <Link
           href="https://yandex.ru/maps/-/CHelqFNT"
@@ -45,7 +50,7 @@ export default function MobileNav({ navLinks, isOpen }) {
         </Link>
       </div>
 
-      <div className="flex flex-col text-white text-base">
+      <div className="mt-6 flex flex-col text-white text-base gap-1">
         <p className="text-lg">Курганинск</p>
         <Link
           href="https://yandex.ru/maps/-/CHelqFNT"
@@ -56,7 +61,7 @@ export default function MobileNav({ navLinks, isOpen }) {
         </Link>
       </div>
 
-      <SocialButtons size={"w-[45px]"} />
-    </nav>
+      <SocialButtons size={"w-[45px] mt-6"} />
+    </div>
   );
 }
