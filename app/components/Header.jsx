@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { navLinks } from "@/public/data";
-import logoBlack from "@/public/main/logo-black.svg";
-import logo from "@/public/main/logo.svg";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import BurgerButton from "./BurgerButton";
-import MobileNav from "./MobileNav";
-import SocialButtons from "./SocialButtons";
+import { navLinks } from '@/public/data';
+import logoBlack from '@/public/main/logo-black.svg';
+import logo from '@/public/main/logo.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import BurgerButton from './BurgerButton';
+import MobileNav from './MobileNav';
+import SocialButtons from './SocialButtons';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +16,14 @@ export default function Header() {
   function openMobileMenu() {
     setIsOpen(!isOpen);
 
-    const b = document.querySelector("body");
+    const b = document.querySelector('body');
 
     if (isOpen === false) {
-      b.classList.add("overflow-hidden");
-      b.classList.remove("overflow-auto");
+      b.classList.add('overflow-hidden');
+      b.classList.remove('overflow-auto');
     } else {
-      b.classList.add("overflow-auto");
-      b.classList.remove("overflow-hidden");
+      b.classList.add('overflow-auto');
+      b.classList.remove('overflow-hidden');
     }
   }
 
@@ -58,10 +58,10 @@ export default function Header() {
           </Link>
           <div className="mt-1 flex flex-col font-bold">
             <Link
-              href="tel:89184026758"
+              href="tel:88612040444"
               className="text-[20px] hover:text-green animate-simple"
             >
-              8 918 402 67 58
+              8 861 204 04 44
             </Link>
             <Link
               href="mailto:azs5@cityoil23.ru"
@@ -125,10 +125,10 @@ export default function Header() {
               />
             </Link>
             <Link
-              href="tel:89184026758"
+              href="tel:88612040444"
               className="text-[18px] hover:text-yelow font-bold animate-simple"
             >
-              8 918 402 67 58
+              8 861 204 04 44
             </Link>
             {/* <!-- Бургер меню кнопка --> */}
             <div
@@ -177,7 +177,7 @@ export default function Header() {
               ул. Шоссейная, 31
             </Link>
 
-            <SocialButtons color={"black"} />
+            <SocialButtons color={'black'} />
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* --color-background: var(--background);
@@ -94,6 +94,25 @@
   background: var(--color-black);
 }
 
+/* Карта Яндекс */
+.ymaps3x0--map-container {
+  border-radius: 15px;
+}
+.ymaps3x0--marker {
+  z-index: 0;
+  width: 50px;
+}
+.my-marker {
+  margin-top: -40px;
+  margin-left: -30px;
+}
+.marker-title {
+  margin-top: -5px;
+  font-size: 10px;
+  color: #e15225;
+}
+
+/* Мобильный адаптив */
 @media (width >= 1280px) {
   .container {
     max-width: 1120px;

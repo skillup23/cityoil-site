@@ -1,20 +1,21 @@
-import { azsAdress, contacts, onas, workers } from "@/public/data";
-import partner4 from "@/public/main/anb.svg";
-import azsFoto1 from "@/public/main/azs-foto1.jpg";
-import partner2 from "@/public/main/gazprom.svg";
-import iconMap from "@/public/main/iconMap.svg";
-import mapAzs from "@/public/main/mapAzs.jpg";
-import partner3 from "@/public/main/rosneft.svg";
-import sale1 from "@/public/main/sale1.jpg";
-import partner1 from "@/public/main/tatneft.svg";
-import Image from "next/image";
-import Link from "next/link";
-import Heading from "./components/Heading";
-import InfoBanner from "./components/InfoBanner";
-import Map from "./components/Map";
-import SectionMain from "./components/SectionMain";
-import Stella from "./components/Stella";
-import Subtitle from "./components/Subtitle";
+import { azsAdress, contacts, onas, workers } from '@/public/data';
+// import partner4 from '@/public/main/anb.svg';
+import azsFoto1 from '@/public/main/azs-foto1.jpg';
+import partner2 from '@/public/main/gazprom.svg';
+import iconMap from '@/public/main/iconMap.svg';
+// import mapAzs from '@/public/main/mapAzs.jpg';
+import partner3 from '@/public/main/rosneft.svg';
+import sale1 from '@/public/main/sale1.jpg';
+import partner1 from '@/public/main/tatneft.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import Heading from './components/Heading';
+import InfoBanner from './components/InfoBanner';
+// import Map from './components/YandexMap';
+import SectionMain from './components/SectionMain';
+import Stella from './components/Stella';
+import Subtitle from './components/Subtitle';
+import YandexMap from './components/YandexMap';
 
 export default function Home() {
   return (
@@ -102,25 +103,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative w-full md:w-1/2">
-            <Image
-              src={mapAzs}
-              width="auto"
-              height="auto"
-              alt="фото АЗС"
-              className="mt-5 md:mt-0 relative md:absolute top-0 md:top-8 left-0 w-full md:max-w-[535px] h-auto md:h-[356px] self-end rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)] z-10"
-            />
-            <div className="z-20">
-              <Map />
-            </div>
+          <div className="relative mt-8 md:mt-0 w-full h-[275px] md:h-[356px] self-end md:w-1/2 rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)] overflow-hidden">
+            <YandexMap />
           </div>
         </div>
       </SectionMain>
 
       {/* --------Поставщики--------- */}
       <SectionMain style="pattern_background" idScroll="postavki">
-        <Subtitle>НАДЕЖНЫЕ БИЗНЕС-ПАРТНЕРЫ</Subtitle>
-        <Heading>Поставщики</Heading>
+        <Subtitle>Партнерский блок</Subtitle>
+        <Heading>Происхождение топлива</Heading>
+        <h6 className="mt-2 mb-12 text-base md:text-xl font-medium">
+          Все поставки топлива осуществляются с ведущих нефтеперерабатывающих
+          заводов России, в том числе принадлежащих компаниям Татнефть, Газпром
+          нефть, Роснефть. Мы&nbsp;соблюдаем строгий контроль качества и
+          поставляем продукцию, соответствующую требованиям ГОСТ.
+        </h6>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
           <Image
@@ -144,7 +142,7 @@ export default function Home() {
             alt="фото АЗС"
             className="max-w-[160px]"
           />
-          <Link href="https://anboil.ru" target="_blank">
+          {/* <Link href="https://anboil.ru" target="_blank">
             <Image
               src={partner4}
               width="auto"
@@ -152,7 +150,7 @@ export default function Home() {
               alt="фото АЗС"
               className="max-w-[163px]"
             />
-          </Link>
+          </Link> */}
         </div>
 
         <h6 className="mt-[50px] text-xl md:text-2xl text-center font-bold">
@@ -205,7 +203,7 @@ export default function Home() {
             width="auto"
             height="auto"
             alt="акция"
-            className="w-full md:w-1/2 mt-8 md:-mt-14"
+            className="w-full md:w-1/2 mt-8 md:-mt-14 rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
           />
         </div>
       </SectionMain>
@@ -225,7 +223,7 @@ export default function Home() {
                 <p>{place}</p>
                 <div className="w-full md:w-[495px]">
                   <p>
-                    Адрес:{" "}
+                    Адрес:{' '}
                     {adresses.map((item, index) => (
                       <span key={index}>{item}</span>
                     ))}
