@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 // components/YandexMap.js
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const YandexMap = () => {
   const mapRef = useRef(null);
@@ -9,9 +9,9 @@ const YandexMap = () => {
   useEffect(() => {
     // Проверяем, что скрипт уже не был загружен
     if (!window.ymaps) {
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.src =
-        'https://api-maps.yandex.ru/2.1/?apikey=a780b13a-0b20-46b6-9f2a-e72766b3c2ac&lang=ru_RU';
+        "https://api-maps.yandex.ru/2.1/?apikey=a780b13a-0b20-46b6-9f2a-e72766b3c2ac&lang=ru_RU";
       script.async = true;
       script.onload = () => {
         window.ymaps.ready(initMap);
@@ -23,14 +23,14 @@ const YandexMap = () => {
 
     function initMap() {
       const map = new window.ymaps.Map(mapRef.current, {
-        center: [45.04, 39.05], // Координаты центра карты (Москва)
+        center: [45.04, 39.05], // Координаты центра карты
         zoom: 11, // Масштаб карты
         controls: [], // Отключаем все элементы управления
       });
 
       // Добавляем кнопку масштаба
-      map.controls.add('zoomControl', {
-        size: 'small',
+      map.controls.add("zoomControl", {
+        size: "small",
         position: {
           right: 10,
           top: 100,
@@ -38,7 +38,7 @@ const YandexMap = () => {
       });
 
       // Добавляем кнопку "Определить местоположение"
-      map.controls.add('geolocationControl', {
+      map.controls.add("geolocationControl", {
         position: {
           right: 10,
           top: 180,
@@ -49,23 +49,23 @@ const YandexMap = () => {
       const markers = [
         {
           coords: [45.065664, 38.98527],
-          hintContent: 'Ситиойл',
-          balloonContent: 'Ростовское шоссе, 5',
+          hintContent: "Ситиойл",
+          balloonContent: "Ростовское шоссе, 5",
         },
         {
           coords: [45.037281, 39.104311],
-          hintContent: 'Ситиойл',
-          balloonContent: 'Сормовская, 200',
+          hintContent: "Ситиойл",
+          balloonContent: "Сормовская, 200",
         },
         {
           coords: [45.013093, 39.065142],
-          hintContent: 'Ситиойл',
-          balloonContent: 'Мачуги, 9',
+          hintContent: "Ситиойл",
+          balloonContent: "Мачуги, 9",
         },
         {
           coords: [44.917462, 40.591445],
-          hintContent: 'Ситиойл',
-          balloonContent: 'Шоссейная, 31А',
+          hintContent: "Ситиойл",
+          balloonContent: "Шоссейная, 31А",
         },
       ];
 
@@ -77,7 +77,7 @@ const YandexMap = () => {
             balloonContent: marker.balloonContent,
           },
           {
-            iconColor: '#64dd17', // Изменяем цвет метки
+            iconColor: "#64dd17", // Изменяем цвет метки
           }
         );
         map.geoObjects.add(placemark);
@@ -85,7 +85,7 @@ const YandexMap = () => {
     }
   }, []);
 
-  return <div ref={mapRef} style={{ width: '100%', height: '100%' }} />;
+  return <div ref={mapRef} style={{ width: "100%", height: "100%" }} />;
 };
 
 export default YandexMap;
