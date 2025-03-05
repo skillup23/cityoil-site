@@ -48,6 +48,13 @@ export default function MobileNav({ navLinks, isOpen, openMobileMenu }) {
         >
           ул. Мачуги, 9
         </Link>
+        <Link
+          href="https://yandex.ru/maps/-/CHelqEZ4"
+          className=" hover:text-green animate-simple"
+          target="_blank"
+        >
+          ул. Степана Разина, 57
+        </Link>
       </div>
 
       <div className="mt-6 flex flex-col text-white text-base gap-1">

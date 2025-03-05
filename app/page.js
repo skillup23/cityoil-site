@@ -1,21 +1,21 @@
-import { azsAdress, contacts, onas, workers } from '@/public/data';
+import { azsAdress, contacts, onas, workers } from "@/public/data";
 // import partner4 from '@/public/main/anb.svg';
-import azsFoto1 from '@/public/main/azs-foto1.jpg';
-import partner2 from '@/public/main/gazprom.svg';
-import iconMap from '@/public/main/iconMap.svg';
+import azsFoto1 from "@/public/main/azs-foto1.jpg";
+import partner2 from "@/public/main/gazprom.svg";
+import iconMap from "@/public/main/iconMap.svg";
 // import mapAzs from '@/public/main/mapAzs.jpg';
-import partner3 from '@/public/main/rosneft.svg';
-import sale1 from '@/public/main/sale1.jpg';
-import partner1 from '@/public/main/tatneft.svg';
-import Image from 'next/image';
-import Link from 'next/link';
-import Heading from './components/Heading';
-import InfoBanner from './components/InfoBanner';
+import partner3 from "@/public/main/rosneft.svg";
+import sale1 from "@/public/main/sale1.jpg";
+import partner1 from "@/public/main/tatneft.svg";
+import Image from "next/image";
+import Link from "next/link";
+import Heading from "./components/Heading";
+import InfoBanner from "./components/InfoBanner";
 // import Map from './components/YandexMap';
-import SectionMain from './components/SectionMain';
-import Stella from './components/Stella';
-import Subtitle from './components/Subtitle';
-import YandexMap from './components/YandexMap';
+import SectionMain from "./components/SectionMain";
+import Stella from "./components/Stella";
+import Subtitle from "./components/Subtitle";
+import YandexMap from "./components/YandexMap";
 
 export default function Home() {
   return (
@@ -94,7 +94,7 @@ export default function Home() {
                       alt="фото АЗС"
                       className="w-[30px] md:w-[50px]"
                     />
-                    <h6 className="text-[18px] md:text-2xl hover:text-green">
+                    <h6 className="text-[14px] md:text-2xl hover:text-green">
                       {title}
                     </h6>
                   </Link>
@@ -113,7 +113,7 @@ export default function Home() {
       <SectionMain style="pattern_background" idScroll="postavki">
         <Subtitle>Партнерский блок</Subtitle>
         <Heading>Происхождение топлива</Heading>
-        <h6 className="mt-2 mb-12 text-base md:text-xl font-medium">
+        <h6 className="mt-2 mb-12 text-base md:text-xl text-center md:text-start font-medium">
           Все поставки топлива осуществляются с ведущих нефтеперерабатывающих
           заводов России, в том числе принадлежащих компаниям Татнефть, Газпром
           нефть, Роснефть. Мы&nbsp;соблюдаем строгий контроль качества и
@@ -223,7 +223,7 @@ export default function Home() {
                 <p>{place}</p>
                 <div className="w-full md:w-[495px]">
                   <p>
-                    Адрес:{' '}
+                    Адрес:{" "}
                     {adresses.map((item, index) => (
                       <span key={index}>{item}</span>
                     ))}

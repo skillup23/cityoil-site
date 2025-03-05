@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { navLinks } from '@/public/data';
-import logoBlack from '@/public/main/logo-black.svg';
-import logo from '@/public/main/logo.svg';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import BurgerButton from './BurgerButton';
-import MobileNav from './MobileNav';
-import SocialButtons from './SocialButtons';
+import { navLinks } from "@/public/data";
+import logoBlack from "@/public/main/logo-black.svg";
+import logo from "@/public/main/logo.svg";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import BurgerButton from "./BurgerButton";
+import MobileNav from "./MobileNav";
+import SocialButtons from "./SocialButtons";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +16,14 @@ export default function Header() {
   function openMobileMenu() {
     setIsOpen(!isOpen);
 
-    const b = document.querySelector('body');
+    const b = document.querySelector("body");
 
     if (isOpen === false) {
-      b.classList.add('overflow-hidden');
-      b.classList.remove('overflow-auto');
+      b.classList.add("overflow-hidden");
+      b.classList.remove("overflow-auto");
     } else {
-      b.classList.add('overflow-auto');
-      b.classList.remove('overflow-hidden');
+      b.classList.add("overflow-auto");
+      b.classList.remove("overflow-hidden");
     }
   }
 
@@ -73,12 +73,21 @@ export default function Header() {
           <p className="text-[48px] font-light">|</p>
           <div className="mt-1 flex flex-col font-bold">
             <p className="text-[20px] text-green text-center">Краснодар</p>
+          </div>
+          <div className="mt-1 flex flex-col font-bold">
             <Link
               href="https://yandex.ru/maps/-/CHelqEZ4"
               className="text-lg hover:text-green animate-simple"
               target="_blank"
             >
               ул. Мачуги, 9
+            </Link>
+            <Link
+              href="https://yandex.ru/maps/-/CHelqJo3"
+              className="mt-[2px] text-lg hover:text-green animate-simple"
+              target="_blank"
+            >
+              ул. Ростовское ш., 5
             </Link>
           </div>
           <div className="mt-1 flex flex-col font-bold">
@@ -90,11 +99,11 @@ export default function Header() {
               ул. Сормовская, 200
             </Link>
             <Link
-              href="https://yandex.ru/maps/-/CHelqJo3"
+              href="https://yandex.ru/maps/-/CHBZ665x"
               className="mt-[2px] text-lg hover:text-green animate-simple"
               target="_blank"
             >
-              ул. Ростовское ш., 5
+              ул. Степана Разина, 57
             </Link>
           </div>
           <p className="text-[48px] font-light">|</p>
@@ -165,6 +174,13 @@ export default function Header() {
             >
               ул. Мачуги, 9
             </Link>
+            <Link
+              href="https://yandex.ru/maps/-/CHBZ665x"
+              className="hover:text-green animate-simple"
+              target="_blank"
+            >
+              ул. Степана Разина, 57
+            </Link>
           </div>
 
           <div className="flex flex-col text-sm font-bold">
@@ -177,7 +193,7 @@ export default function Header() {
               ул. Шоссейная, 31
             </Link>
 
-            <SocialButtons color={'black'} />
+            <SocialButtons color={"black"} />
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 "use client";
 import {
   priceMach,
+  priceRazina,
   priceRost,
   priceShos,
   priceSorm,
@@ -49,6 +50,8 @@ export default function Stella() {
       setIsPrice(priceSorm);
     } else if (isAzs == "Мачуги, 9") {
       setIsPrice(priceMach);
+    } else if (isAzs == "Степана Разина, 57") {
+      setIsPrice(priceRazina);
     } else if (isAzs == "Шоссейная, 31") {
       setIsPrice(priceShos);
     }

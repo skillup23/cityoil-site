@@ -63,6 +63,11 @@ const YandexMap = () => {
           balloonContent: "Мачуги, 9",
         },
         {
+          coords: [45.019678, 39.024172],
+          hintContent: "Ситиойл",
+          balloonContent: "Степана Разина, 57",
+        },
+        {
           coords: [44.917462, 40.591445],
           hintContent: "Ситиойл",
           balloonContent: "Шоссейная, 31А",
