@@ -192,7 +192,7 @@ const priceRost = [
   {
     id: id++,
     toplovo: 'ДТ зим.',
-    price: '65,80',
+    price: '66,10',
   },
 ];
 
