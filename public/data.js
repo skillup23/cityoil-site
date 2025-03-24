@@ -116,12 +116,13 @@ const workers = [
   {
     id: id++,
     name: 'Заправщик АЗС',
-    place: 'Курганинск',
+    place: 'Краснодар, Курганинск',
     adresses: [
       'Ростовское шоссе 5, ',
       'Сормовская 200, ',
       'Мачуги 9, ',
-      'Степана Разина 57',
+      'Степана Разина 57, ',
+      'ул. Шоссейная, 31',
     ],
     price: 'от 3500 руб. за смену',
     time: 'График: 1/3',
@@ -177,69 +178,7 @@ const priceRost = [
   {
     id: id++,
     toplovo: 'Аи92',
-    price: '57,20',
-  },
-  {
-    id: id++,
-    toplovo: 'Аи95',
-    price: '62,50',
-  },
-  {
-    id: id++,
-    toplovo: 'Аи98',
-    price: '84,60',
-  },
-  {
-    id: id++,
-    toplovo: 'ДТ зим.',
-    price: '66,10',
-  },
-];
-
-// Краснодар Сормовская
-const priceSorm = [
-  {
-    id: id++,
-    toplovo: 'Аи92',
-    price: '57,30',
-  },
-  {
-    id: id++,
-    toplovo: 'Аи95',
-    price: '62,60',
-  },
-  {
-    id: id++,
-    toplovo: 'ДТ зим.',
-    price: '66,50',
-  },
-];
-
-// Краснодар Мачуги
-const priceMach = [
-  {
-    id: id++,
-    toplovo: 'Аи92',
-    price: '57,30',
-  },
-  {
-    id: id++,
-    toplovo: 'Аи95',
-    price: '62,60',
-  },
-  {
-    id: id++,
-    toplovo: 'ДТ зим.',
-    price: '66,50',
-  },
-];
-
-// Краснодар Степана Разина
-const priceRazina = [
-  {
-    id: id++,
-    toplovo: 'Аи92',
-    price: '57,70',
+    price: '57,40',
   },
   {
     id: id++,
@@ -248,8 +187,70 @@ const priceRazina = [
   },
   {
     id: id++,
+    toplovo: 'Аи98',
+    price: '84,80',
+  },
+  {
+    id: id++,
     toplovo: 'ДТ зим.',
-    price: '66,50',
+    price: '66,30',
+  },
+];
+
+// Краснодар Сормовская
+const priceSorm = [
+  {
+    id: id++,
+    toplovo: 'Аи92',
+    price: '57,50',
+  },
+  {
+    id: id++,
+    toplovo: 'Аи95',
+    price: '62,80',
+  },
+  {
+    id: id++,
+    toplovo: 'ДТ зим.',
+    price: '66,70',
+  },
+];
+
+// Краснодар Мачуги
+const priceMach = [
+  {
+    id: id++,
+    toplovo: 'Аи92',
+    price: '57,50',
+  },
+  {
+    id: id++,
+    toplovo: 'Аи95',
+    price: '62,80',
+  },
+  {
+    id: id++,
+    toplovo: 'ДТ зим.',
+    price: '66,70',
+  },
+];
+
+// Краснодар Степана Разина
+const priceRazina = [
+  {
+    id: id++,
+    toplovo: 'Аи92',
+    price: '57,90',
+  },
+  {
+    id: id++,
+    toplovo: 'Аи95',
+    price: '62,90',
+  },
+  {
+    id: id++,
+    toplovo: 'ДТ зим.',
+    price: '66,70',
   },
 ];
 
@@ -258,17 +259,17 @@ const priceShos = [
   {
     id: id++,
     toplovo: 'Аи92',
-    price: '57,00',
+    price: '57,20',
   },
   {
     id: id++,
     toplovo: 'Аи95',
-    price: '62,45',
+    price: '62,65',
   },
   {
     id: id++,
     toplovo: 'ДТ зим.',
-    price: '66,30',
+    price: '66,50',
   },
 ];
 
