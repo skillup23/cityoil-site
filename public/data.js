@@ -259,17 +259,17 @@ const priceShos = [
   {
     id: id++,
     toplovo: 'Аи92',
-    price: '57,20',
+    price: '57,50',
   },
   {
     id: id++,
     toplovo: 'Аи95',
-    price: '62,65',
+    price: '62,95',
   },
   {
     id: id++,
     toplovo: 'ДТ зим.',
-    price: '66,50',
+    price: '66,70',
   },
 ];
 
