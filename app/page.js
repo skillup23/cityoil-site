@@ -1,21 +1,23 @@
-import { azsAdress, contacts, onas, workers } from "@/public/data";
+import { azsAdress, contacts, onas, workers } from '@/public/data';
 // import partner4 from '@/public/main/anb.svg';
-import azsFoto1 from "@/public/main/azs-foto1.jpg";
-import partner2 from "@/public/main/gazprom.svg";
-import iconMap from "@/public/main/iconMap.svg";
+import azsFoto1 from '@/public/main/azs-foto1.jpg';
+import partner2 from '@/public/main/gazprom.svg';
+import iconMap from '@/public/main/iconMap.svg';
 // import mapAzs from '@/public/main/mapAzs.jpg';
-import partner3 from "@/public/main/rosneft.svg";
-import sale1 from "@/public/main/sale1.jpg";
-import partner1 from "@/public/main/tatneft.svg";
-import Image from "next/image";
-import Link from "next/link";
-import Heading from "./components/Heading";
-import InfoBanner from "./components/InfoBanner";
+import partner3 from '@/public/main/rosneft.svg';
+import sale1 from '@/public/main/sales/1.jpg';
+import sale2 from '@/public/main/sales/2.jpg';
+import sale3 from '@/public/main/sales/3.jpg';
+import partner1 from '@/public/main/tatneft.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import Heading from './components/Heading';
+import InfoBanner from './components/InfoBanner';
 // import Map from './components/YandexMap';
-import SectionMain from "./components/SectionMain";
-import Stella from "./components/Stella";
-import Subtitle from "./components/Subtitle";
-import YandexMap from "./components/YandexMap";
+import SectionMain from './components/SectionMain';
+import Stella from './components/Stella';
+import Subtitle from './components/Subtitle';
+import YandexMap from './components/YandexMap';
 
 export default function Home() {
   return (
@@ -191,20 +193,36 @@ export default function Home() {
         <Subtitle>ДЛЯ НОВЫХ И ПОСТОЯННЫХ КЛИЕНТОВ</Subtitle>
         <Heading>Акции и предложения</Heading>
         <div className="flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 my-[20px] md:mr-20 md:ml-0">
+          {/* <div className="w-full md:w-1/2 my-[20px] md:mr-20 md:ml-0">
             <h5 className="text-xl md:text-2xl text-center text-gray font-bold">
               Данный раздел <br /> находится в разработке. <br /> Просим
               извинения за <br /> предоставленные неудобства.
             </h5>
-          </div>
+          </div> */}
 
-          <Image
-            src={sale1}
-            width="auto"
-            height="auto"
-            alt="акция"
-            className="w-full md:w-1/2 mt-8 md:-mt-14 rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
-          />
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <Image
+              src={sale1}
+              width="auto"
+              height="auto"
+              alt="акция"
+              className="w-full mt-8 rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+            />
+            <Image
+              src={sale2}
+              width="auto"
+              height="auto"
+              alt="акция"
+              className="w-full mt-8 rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+            />
+            {/* <Image
+              src={sale3}
+              width="auto"
+              height="auto"
+              alt="акция"
+              className="w-full mt-8 rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+            /> */}
+          </div>
         </div>
       </SectionMain>
 
@@ -223,7 +241,7 @@ export default function Home() {
                 <p>{place}</p>
                 <div className="w-full md:w-[495px]">
                   <p>
-                    Адрес:{" "}
+                    Адрес:{' '}
                     {adresses.map((item, index) => (
                       <span key={index}>{item}</span>
                     ))}
