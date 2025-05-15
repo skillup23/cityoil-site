@@ -183,7 +183,7 @@ const priceRost = [
   {
     id: id++,
     toplovo: 'Аи95',
-    price: '62,70',
+    price: '63,10',
   },
   {
     id: id++,
@@ -207,12 +207,12 @@ const priceSorm = [
   {
     id: id++,
     toplovo: 'Аи95',
-    price: '62,80',
+    price: '63,10',
   },
   {
     id: id++,
     toplovo: 'ДТ зим.',
-    price: '66,70',
+    price: '67,30',
   },
 ];
 
@@ -226,12 +226,12 @@ const priceMach = [
   {
     id: id++,
     toplovo: 'Аи95',
-    price: '62,80',
+    price: '63,10',
   },
   {
     id: id++,
     toplovo: 'ДТ зим.',
-    price: '66,70',
+    price: '67,30',
   },
 ];
 
@@ -240,17 +240,17 @@ const priceRazina = [
   {
     id: id++,
     toplovo: 'Аи92',
-    price: '57,90',
+    price: '58,50',
   },
   {
     id: id++,
     toplovo: 'Аи95',
-    price: '62,90',
+    price: '63,90',
   },
   {
     id: id++,
     toplovo: 'ДТ зим.',
-    price: '66,70',
+    price: '67,80',
   },
 ];
 
@@ -264,12 +264,12 @@ const priceShos = [
   {
     id: id++,
     toplovo: 'Аи95',
-    price: '62,95',
+    price: '63,25',
   },
   {
     id: id++,
     toplovo: 'ДТ зим.',
-    price: '66,70',
+    price: '67,30',
   },
 ];
 
