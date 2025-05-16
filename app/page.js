@@ -201,13 +201,13 @@ export default function Home() {
           </div> */}
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <Image
+            {/* <Image
               src={sale1}
               width="auto"
               height="auto"
               alt="акция"
               className="w-full mt-8 rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
-            />
+            /> */}
             <Image
               src={sale2}
               width="auto"

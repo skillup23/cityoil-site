@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* --color-background: var(--background);
@@ -70,8 +70,8 @@
 
 .pattern_background {
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.95),
-      rgba(255, 255, 255, 0.95)
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
     ),
     url(../public/main/pattern.png);
   background-size: 60%;
