@@ -1,10 +1,10 @@
 "use client";
 import {
-  priceMach,
-  priceRazina,
-  priceRost,
-  priceShos,
-  priceSorm,
+  // priceMach,
+  // priceRazina,
+  // priceRost,
+  // priceShos,
+  // priceSorm,
   stellaAdrKgn,
   stellaAdrKrd,
   stellaCity,
@@ -15,7 +15,13 @@ import stella from "@/public/main/stella.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function Stella() {
+export default function Stella({
+  priceRost,
+  priceMach,
+  priceRazina,
+  priceShos,
+  priceSorm,
+}) {
   const [isOpenCity, setIsOpenCity] = useState(false);
   const [isCity, setIsCity] = useState("Краснодар");
   const [isOpenAzs, setIsOpenAzs] = useState(false);

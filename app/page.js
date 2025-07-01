@@ -1,23 +1,20 @@
-import { azsAdress, contacts, onas, workers } from '@/public/data';
+import { azsAdress, contacts, onas, workers } from "@/public/data";
 // import partner4 from '@/public/main/anb.svg';
-import azsFoto1 from '@/public/main/azs-foto1.jpg';
-import partner2 from '@/public/main/gazprom.svg';
-import iconMap from '@/public/main/iconMap.svg';
+import partner2 from "@/public/main/gazprom.svg";
+import iconMap from "@/public/main/iconMap.svg";
 // import mapAzs from '@/public/main/mapAzs.jpg';
-import partner3 from '@/public/main/rosneft.svg';
-import sale1 from '@/public/main/sales/1.jpg';
-import sale2 from '@/public/main/sales/2.jpg';
-import sale3 from '@/public/main/sales/3.jpg';
-import partner1 from '@/public/main/tatneft.svg';
-import Image from 'next/image';
-import Link from 'next/link';
-import Heading from './components/Heading';
-import InfoBanner from './components/InfoBanner';
+import partner3 from "@/public/main/rosneft.svg";
+import sale2 from "@/public/main/sales/2.jpg";
+import partner1 from "@/public/main/tatneft.svg";
+import Image from "next/image";
+import Link from "next/link";
+import Heading from "./components/Heading";
+import InfoBanner from "./components/InfoBanner";
 // import Map from './components/YandexMap';
-import SectionMain from './components/SectionMain';
-import Stella from './components/Stella';
-import Subtitle from './components/Subtitle';
-import YandexMap from './components/YandexMap';
+import Prices from "./components/Prices";
+import SectionMain from "./components/SectionMain";
+import Subtitle from "./components/Subtitle";
+import YandexMap from "./components/YandexMap";
 
 export default function Home() {
   return (
@@ -54,24 +51,7 @@ export default function Home() {
 
       {/* --------Цены--------- */}
       <SectionMain style="pattern_background" idScroll="price">
-        <div className="flex flex-col-reverse md:flex-row justify-between">
-          <div>
-            <Subtitle style="hidden md:block">
-              ТОПЛИВО НАИВЫСШЕГО КАЧЕСТВА
-            </Subtitle>
-            <Heading style="mt-5 md:mt-3">
-              Актуальные цены на&nbsp;топливо
-            </Heading>
-            <Image
-              src={azsFoto1}
-              width="auto"
-              height="auto"
-              alt="фото АЗС"
-              className="w-[100%] md:max-w-[572px] rounded-lg shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
-            />
-          </div>
-          <Stella />
-        </div>
+        <Prices />
       </SectionMain>
 
       {/* --------Местоположение--------- */}
@@ -241,7 +221,7 @@ export default function Home() {
                 <p>{place}</p>
                 <div className="w-full md:w-[495px]">
                   <p>
-                    Адрес:{' '}
+                    Адрес:{" "}
                     {adresses.map((item, index) => (
                       <span key={index}>{item}</span>
                     ))}

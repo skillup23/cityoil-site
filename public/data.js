@@ -192,7 +192,7 @@ const priceRost = [
   },
   {
     id: id++,
-    toplovo: "ДТ зим.",
+    toplovo: "ДТ",
     price: "67,39",
   },
 ];
@@ -211,7 +211,7 @@ const priceSorm = [
   },
   {
     id: id++,
-    toplovo: "ДТ зим.",
+    toplovo: "ДТ",
     price: "67,70",
   },
 ];
@@ -230,7 +230,7 @@ const priceMach = [
   },
   {
     id: id++,
-    toplovo: "ДТ зим.",
+    toplovo: "ДТ",
     price: "67,70",
   },
 ];
@@ -268,7 +268,7 @@ const priceShos = [
   },
   {
     id: id++,
-    toplovo: "ДТ зим.",
+    toplovo: "ДТ",
     price: "67,70",
   },
 ];
