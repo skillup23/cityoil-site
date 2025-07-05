@@ -174,102 +174,102 @@ const contacts = [
 ];
 
 // Краснодар Ростовское
-const priceRost = [
+const priceRostLocal = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "58,19",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "63,79",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "Аи98",
-    price: "84,79",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "ДТ",
-    price: "67,39",
+    price: "00,00",
   },
 ];
 
 // Краснодар Сормовская
-const priceSorm = [
+const priceSormLocal = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "57,80",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "63,40",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "ДТ",
-    price: "67,70",
+    price: "00,00",
   },
 ];
 
 // Краснодар Мачуги
-const priceMach = [
+const priceMachLocal = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "57,80",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "63,40",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "ДТ",
-    price: "67,70",
+    price: "00,00",
   },
 ];
 
 // Краснодар Степана Разина
-const priceRazina = [
+const priceRazinaLocal = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "58,70",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "64,60",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "ДТ зим.",
-    price: "68,00",
+    price: "00,00",
   },
 ];
 
 // Курганинск Щоссейная
-const priceShos = [
+const priceShosLocal = [
   {
     id: id++,
     toplovo: "Аи92",
-    price: "57,80",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "Аи95",
-    price: "63,55",
+    price: "00,00",
   },
   {
     id: id++,
     toplovo: "ДТ",
-    price: "67,70",
+    price: "00,00",
   },
 ];
 
@@ -288,11 +288,11 @@ export {
   contacts,
   navLinks,
   onas,
-  priceMach,
-  priceRazina,
-  priceRost,
-  priceShos,
-  priceSorm,
+  priceMachLocal,
+  priceRazinaLocal,
+  priceRostLocal,
+  priceShosLocal,
+  priceSormLocal,
   stellaAdrKgn,
   stellaAdrKrd,
   stellaCity,
