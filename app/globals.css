@@ -10,7 +10,9 @@
   --color-gray: #424246;
   --color-gray-light: #65656f;
 
-  --font-sans: Montserrat, Arial;
+  --font-sans: Montserrat, Roboto;
+  --font-serif: ui-serif, serif;
+  --font-mono: ui-monospace, monospace;
 }
 
 /*
