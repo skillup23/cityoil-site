@@ -1,31 +1,41 @@
-import { azsAdress, contacts, onas, workers } from '@/public/data';
+import { azsAdress, contacts, onas, workers } from "@/public/data";
 // import partner4 from '@/public/main/anb.svg';
-import partner2 from '@/public/main/gazprom.svg';
-import iconMap from '@/public/main/iconMap.svg';
+import partner2 from "@/public/main/gazprom.svg";
+import iconMap from "@/public/main/iconMap.svg";
 // import mapAzs from '@/public/main/mapAzs.jpg';
-import partner3 from '@/public/main/rosneft.svg';
-import sale2 from '@/public/main/sales/2.jpg';
-import partner1 from '@/public/main/tatneft.svg';
-import Image from 'next/image';
-import Link from 'next/link';
-import Heading from './components/Heading';
-import InfoBanner from './components/InfoBanner';
+import partner3 from "@/public/main/rosneft.svg";
+import partner1 from "@/public/main/tatneft.svg";
+import Image from "next/image";
+import Link from "next/link";
+import Heading from "./components/Heading";
+import InfoBanner from "./components/InfoBanner";
 // import Map from './components/YandexMap';
-import Prices from './components/Prices';
-import SectionMain from './components/SectionMain';
-import Subtitle from './components/Subtitle';
-import YandexMap from './components/YandexMap';
+import Prices from "./components/Prices";
+import SectionMain from "./components/SectionMain";
+import Subtitle from "./components/Subtitle";
+import YandexMap from "./components/YandexMap";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   return (
     <main>
       <InfoBanner>
-        <p className="mx-auto lg:w-[905px] text-white text-xs md:text-base text-center leading-4 md:leading-6">
+        {/* <p className="mx-auto lg:w-[905px] text-white text-xs md:text-base text-center leading-4 md:leading-6">
           Внимание! На АЗС ведутся ремонтные работы, но&nbsp;продажа топлива
           осуществляется в&nbsp;штатном режиме. Мы&nbsp;всегда рады видеть вас
           в&nbsp;числе наших&nbsp;клиентов!
+        </p> */}
+        <p className="mx-auto lg:w-[905px] text-white text-xs md:text-base text-center leading-4 md:leading-6">
+          Дорогие клиенты! Наша АЗС по адресу ул. С. Разина, 57, временно
+          закрыта на масштабную реконструкцию. <br />
+          Мы готовим для вас совершенно новое пространство и ещё более высокий
+          уровень сервиса.
+          <br />
+          Мы снова откроемся в середине декабря 2025 года!
+          <br />
+          Следите за новостями, здесь всё будет по-новому! Приносим извинения за
+          временные неудобства.
         </p>
       </InfoBanner>
 
@@ -230,7 +240,7 @@ export default function Home() {
                 <p>{place}</p>
                 <div className="w-full md:w-[495px]">
                   <p>
-                    Адрес:{' '}
+                    Адрес:{" "}
                     {adresses.map((item, index) => (
                       <span key={index}>{item}</span>
                     ))}
