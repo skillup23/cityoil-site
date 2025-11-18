@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import {
   // priceMach,
   // priceRazina,
@@ -8,24 +8,24 @@ import {
   stellaAdrKgn,
   stellaAdrKrd,
   stellaCity,
-} from "@/public/data";
-import arroy from "@/public/main/arroy-down.svg";
-import stellaMob from "@/public/main/stella-mobile.svg";
-import stella from "@/public/main/stella.svg";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+} from '@/public/data';
+import arroy from '@/public/main/arroy-down.svg';
+import stellaMob from '@/public/main/stella-mobile.svg';
+import stella from '@/public/main/stella.svg';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function Stella({
   priceRost,
   priceMach,
-  priceRazina,
+  // priceRazina,
   priceShos,
   priceSorm,
 }) {
   const [isOpenCity, setIsOpenCity] = useState(false);
-  const [isCity, setIsCity] = useState("Краснодар");
+  const [isCity, setIsCity] = useState('Краснодар');
   const [isOpenAzs, setIsOpenAzs] = useState(false);
-  const [isAzs, setIsAzs] = useState("Ростовское ш., 5");
+  const [isAzs, setIsAzs] = useState('Ростовское ш., 5');
 
   const [isPrice, setIsPrice] = useState(priceRost);
 
@@ -40,27 +40,28 @@ export default function Stella({
   }
 
   function toggleCity(item) {
-    if (item == "Краснодар") {
-      setIsAzs("Ростовское ш., 5");
+    if (item == 'Краснодар') {
+      setIsAzs('Ростовское ш., 5');
     }
-    if (item == "Курганинск") {
-      setIsAzs("Шоссейная, 31");
+    if (item == 'Курганинск') {
+      setIsAzs('Шоссейная, 31');
     }
     setIsCity(item);
   }
 
   useEffect(() => {
-    if (isAzs == "Ростовское ш., 5") {
+    if (isAzs == 'Ростовское ш., 5') {
       setIsPrice(priceRost);
-    } else if (isAzs == "Сормовская, 200") {
+    } else if (isAzs == 'Сормовская, 200') {
       setIsPrice(priceSorm);
-    } else if (isAzs == "Мачуги, 9") {
+    } else if (isAzs == 'Мачуги, 9') {
       setIsPrice(priceMach);
-    } else if (isAzs == "Степана Разина, 57") {
-      setIsPrice(priceRazina);
-    } else if (isAzs == "Шоссейная, 31") {
+    } else if (isAzs == 'Шоссейная, 31') {
       setIsPrice(priceShos);
     }
+    // } else if (isAzs == 'Степана Разина, 57') {
+    //   setIsPrice(priceRazina);
+    // }
   }, [isAzs]);
 
   return (
@@ -124,7 +125,7 @@ export default function Stella({
             {isAzs}
           </span>
 
-          {isCity == "Краснодар" && (
+          {isCity == 'Краснодар' && (
             <ul
               className={`w-full ${
                 isOpenAzs ? `flex` : `hidden`
@@ -144,7 +145,7 @@ export default function Stella({
             </ul>
           )}
 
-          {isCity == "Курганинск" && (
+          {isCity == 'Курганинск' && (
             <ul
               className={`w-full ${
                 isOpenAzs ? `scale-100 flex` : `scale-25 hidden`

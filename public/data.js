@@ -236,23 +236,23 @@ const priceMachLocal = [
 ];
 
 // Краснодар Степана Разина
-const priceRazinaLocal = [
-  {
-    id: id++,
-    toplovo: 'Аи92',
-    price: '00,00',
-  },
-  {
-    id: id++,
-    toplovo: 'Аи95',
-    price: '00,00',
-  },
-  {
-    id: id++,
-    toplovo: 'ДТ зим.',
-    price: '00,00',
-  },
-];
+// const priceRazinaLocal = [
+//   {
+//     id: id++,
+//     toplovo: 'Аи92',
+//     price: '00,00',
+//   },
+//   {
+//     id: id++,
+//     toplovo: 'Аи95',
+//     price: '00,00',
+//   },
+//   {
+//     id: id++,
+//     toplovo: 'ДТ зим.',
+//     price: '00,00',
+//   },
+// ];
 
 // Курганинск Щоссейная
 const priceShosLocal = [
@@ -279,7 +279,7 @@ const stellaAdrKrd = [
   'Ростовское ш., 5',
   'Сормовская, 200',
   'Мачуги, 9',
-  'Степана Разина, 57',
+  // 'Степана Разина, 57',
 ];
 const stellaAdrKgn = ['Шоссейная, 31'];
 
@@ -289,7 +289,6 @@ export {
   navLinks,
   onas,
   priceMachLocal,
-  priceRazinaLocal,
   priceRostLocal,
   priceShosLocal,
   priceSormLocal,
@@ -297,4 +296,5 @@ export {
   stellaAdrKrd,
   stellaCity,
   workers,
+  // priceRazinaLocal,
 };
