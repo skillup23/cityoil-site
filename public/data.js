@@ -54,9 +54,14 @@ const azsAdress = [
     title: 'Краснодар, ул. Сормовская, 200',
     url: 'https://yandex.ru/maps/-/CHelqFNT',
   },
+  // {
+  //   id: id++,
+  //   title: 'Краснодар, ул. Степана Разина, 57 (временно на реконструкции)',
+  //   url: 'https://yandex.ru/maps/-/CHBZ665x',
+  // },
   {
     id: id++,
-    title: 'Краснодар, ул. Степана Разина, 57 (временно на реконструкции)',
+    title: 'Платнировкая, ул. Карла Маркса, 128Б',
     url: 'https://yandex.ru/maps/-/CHBZ665x',
   },
   {

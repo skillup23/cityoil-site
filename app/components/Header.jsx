@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { navLinks } from "@/public/data";
-import logoBlack from "@/public/main/logo-black.svg";
-import logo from "@/public/main/logo.svg";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import BurgerButton from "./BurgerButton";
-import MobileNav from "./MobileNav";
-import SocialButtons from "./SocialButtons";
+import { navLinks } from '@/public/data';
+import logoBlack from '@/public/main/logo-black.svg';
+import logo from '@/public/main/logo.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import BurgerButton from './BurgerButton';
+import MobileNav from './MobileNav';
+import SocialButtons from './SocialButtons';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +16,14 @@ export default function Header() {
   function openMobileMenu() {
     setIsOpen(!isOpen);
 
-    const b = document.querySelector("body");
+    const b = document.querySelector('body');
 
     if (isOpen === false) {
-      b.classList.add("overflow-hidden");
-      b.classList.remove("overflow-auto");
+      b.classList.add('overflow-hidden');
+      b.classList.remove('overflow-auto');
     } else {
-      b.classList.add("overflow-auto");
-      b.classList.remove("overflow-hidden");
+      b.classList.add('overflow-auto');
+      b.classList.remove('overflow-hidden');
     }
   }
 
@@ -59,59 +59,61 @@ export default function Header() {
           <div className="mt-1 flex flex-col font-bold">
             <Link
               href="tel:88612040444"
-              className="text-[20px] hover:text-green animate-simple"
+              className="text-[18px] hover:text-green animate-simple"
             >
               8 861 204 04 44
             </Link>
             <Link
               href="mailto:azs5@cityoil23.ru"
-              className="text-lg hover:text-green animate-simple"
+              className="text-md hover:text-green animate-simple"
             >
               azs5@cityoil23.ru
             </Link>
           </div>
           <p className="text-[48px] font-light">|</p>
           <div className="mt-1 flex flex-col font-bold">
-            <p className="text-[20px] text-green text-center">Краснодар</p>
+            <p className="text-[18px] text-green text-center">Краснодар</p>
+            <Link
+              href="https://yandex.ru/maps/-/CHelqFNT"
+              className="text-md hover:text-green animate-simple"
+              target="_blank"
+            >
+              ул. Сормовская, 200
+            </Link>
           </div>
           <div className="mt-1 flex flex-col font-bold">
             <Link
               href="https://yandex.ru/maps/-/CHelqEZ4"
-              className="text-lg hover:text-green animate-simple"
+              className="text-md hover:text-green animate-simple text-center"
               target="_blank"
             >
               ул. Мачуги, 9
             </Link>
             <Link
               href="https://yandex.ru/maps/-/CHelqJo3"
-              className="mt-[2px] text-lg hover:text-green animate-simple"
+              className="mt-[2px] text-md hover:text-green animate-simple text-center"
               target="_blank"
             >
               ул. Ростовское ш., 5
             </Link>
           </div>
+          <p className="text-[48px] font-light">|</p>
           <div className="mt-1 flex flex-col font-bold">
+            <p className="text-[18px] text-gray text-center">Платнировская</p>
             <Link
-              href="https://yandex.ru/maps/-/CHelqFNT"
-              className="text-lg hover:text-green animate-simple"
+              href="https://yandex.ru/maps/-/CLsV6S6~"
+              className="mt-[2px] text-md hover:text-gray animate-simple"
               target="_blank"
             >
-              ул. Сормовская, 200
-            </Link>
-            <Link
-              href="https://yandex.ru/maps/-/CHBZ665x"
-              className="mt-[2px] text-lg hover:text-green animate-simple"
-              target="_blank"
-            >
-              ул. Степана Разина, 57
+              ул. Карла Маркса, 128Б
             </Link>
           </div>
           <p className="text-[48px] font-light">|</p>
           <div className="mt-1 flex flex-col font-bold">
-            <p className="text-[20px] text-yeloy text-center">Курганинск</p>
+            <p className="text-[18px] text-yeloy text-center">Курганинск</p>
             <Link
               href="https://yandex.ru/maps/-/CHelq0Oe"
-              className="text-lg hover:text-yeloy animate-simple"
+              className="text-md hover:text-yeloy animate-simple"
               target="_blank"
             >
               ул. Шоссейная, 31
@@ -174,13 +176,7 @@ export default function Header() {
             >
               ул. Мачуги, 9
             </Link>
-            <Link
-              href="https://yandex.ru/maps/-/CHBZ665x"
-              className="hover:text-green animate-simple"
-              target="_blank"
-            >
-              ул. Степана Разина, 57
-            </Link>
+            <SocialButtons color={'black'} />
           </div>
 
           <div className="flex flex-col text-sm font-bold">
@@ -192,8 +188,14 @@ export default function Header() {
             >
               ул. Шоссейная, 31
             </Link>
-
-            <SocialButtons color={"black"} />
+            <p className="mt-8 text-base text-gray">Платнировская</p>
+            <Link
+              href="https://yandex.ru/maps/-/CLsV6S6~"
+              className="hover:text-gray animate-simple"
+              target="_blank"
+            >
+              ул. Карла Маркса, 128Б
+            </Link>
           </div>
         </div>
 
