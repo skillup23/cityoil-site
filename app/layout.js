@@ -49,6 +49,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="yandex-verification" content="1f84d1e02252ae6e" />
       </head>
       <body className={`${Montcerrat.className} antialiased`}>
         <Header />
