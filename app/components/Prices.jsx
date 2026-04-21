@@ -23,13 +23,16 @@ export default async function Prices() {
   // const db = client.db("cityoil");
 
   try {
+    console.log('🔄 Запрос к MongoDB для цен...');
     const client = await clientPromise;
     const db = client.db('cityoil');
-    const dataRost = await db.collection('priceRost').find({}).toArray();
-    const dataSorm = await db.collection('priceSorm').find({}).toArray();
-    const dataMach = await db.collection('priceMach').find({}).toArray();
+    // Отключаем кеширование для свежих данных
+    const dataRost = await db.collection('priceRost').find({}, { noCursorTimeout: false }).toArray();
+    const dataSorm = await db.collection('priceSorm').find({}, { noCursorTimeout: false }).toArray();
+    const dataMach = await db.collection('priceMach').find({}, { noCursorTimeout: false }).toArray();
     // const dataRazina = await db.collection("priceRazina").find({}).toArray();
-    const dataShos = await db.collection('priceShos').find({}).toArray();
+    const dataShos = await db.collection('priceShos').find({}, { noCursorTimeout: false }).toArray();
+    console.log('✅ Данные из MongoDB получены успешно');
 
     // Конвертация MongoDB данных в простой объект
     priceRost = dataRost.map((item) => ({

@@ -15,13 +15,12 @@ const nextConfig = {
   // Оптимизация для снижения нагрузки
   poweredByHeader: false,
   compress: true,
-  // Для Next.js 15
+  // Отключаем телеметрию для снижения нагрузки
+  telemetry: false,
+  // Увеличиваем таймауты для стабильности
   experimental: {
-    optimizePackageImports: [
-      "@mui/material",
-      "@mui/icons-material",
-      "mongoose",
-    ],
+    // Отключаем некоторые экспериментальные фичи
+    optimizePackageImports: false, // Отключаем для снижения нагрузки
   },
 };
 
