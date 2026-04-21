@@ -15,7 +15,7 @@ import SectionMain from './components/SectionMain';
 import Subtitle from './components/Subtitle';
 import YandexMap from './components/YandexMap';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default function Home() {
   return (

@@ -10,4 +10,14 @@ services:
     environment:
       - NODE_ENV=production
       - MONGODB_URI=${MONGODB_URI}
+      - NODE_OPTIONS=--max-old-space-size=512
     restart: unless-stopped
+    # Ограничиваем ресурсы для предотвращения перегрузки
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M

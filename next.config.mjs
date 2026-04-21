@@ -12,6 +12,9 @@ const nextConfig = {
   env: {
     MONGODB_URI: process.env.MONGODB_URI,
   },
+  // Оптимизация для снижения нагрузки
+  poweredByHeader: false,
+  compress: true,
   // Для Next.js 15
   experimental: {
     optimizePackageImports: [
